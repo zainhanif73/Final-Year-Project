@@ -1,0 +1,81 @@
+<div style="background-color:#f5f7fa; height: 100%; margin-bottom: 20px;">
+    <div class="my-3">.</div>
+    <div>
+        <div class="modal-dialog tobe" role="document">
+            <div class="modal-content card">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1>
+                        <Strong>Register to</Strong>
+                        <strong style="color: #4a39ac;"> Clinic</strong> 
+                        <strong style="color:#ffbf00;">ea</strong>
+                    </h1>
+                </div>
+
+                <div class="modal-body pb-4 pt-0">
+                    <form [formGroup]="getPatientData">
+
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Full Name</mat-label>
+                            <input type="text" matInput placeholder="Ex. Ahmed Muhammad" formControlName="name">
+                          </mat-form-field>
+
+                        <mat-form-field class="example-full-width" appearance="fill">
+                          <mat-label>Email</mat-label>
+                          <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+                        </mat-form-field>
+                        
+                          <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Username</mat-label>
+                            <input type="text" matInput placeholder="Ex. ahmed2000" formControlName="username">
+                          </mat-form-field>
+
+                          <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Contact</mat-label>
+                            <input type="text" matInput placeholder="Ex. 03185108806" formControlName="contact">
+                          </mat-form-field>
+
+                          <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>CNIC No.(Without Dashes)</mat-label>
+                            <input type="name" matInput placeholder="Ex. 5440081119018" formControlName="cnic">
+                           
+                          </mat-form-field>
+
+                          <mat-form-field class="example-full-width" appearance="fill">
+                              <mat-label>Date Of Birth</mat-label>
+                                <input matInput [matDatepicker]="picker3" formControlName="dob"
+                                  value="">
+                                <mat-datepicker-toggle matSuffix [for]="picker3">
+                                </mat-datepicker-toggle>
+                              <mat-datepicker #picker3></mat-datepicker>
+                           </mat-form-field>
+
+
+                          <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Gender</mat-label>
+                            <mat-select disableRipple formControlName="gender">
+                              <mat-option value="Male">Male</mat-option>
+                              <mat-option value="Female">Female</mat-option>
+                              </mat-select>
+                          </mat-form-field>
+
+                          <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Address</mat-label>
+                            <textarea type="name" matInput placeholder="Ex. House# 868, Street# 14, G-11/1, Islamabad" formControlName="address"></textarea>
+                            
+                          </mat-form-field>
+
+                          <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Enter your password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password"> 
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                          </mat-form-field>
+                          
+                          <button mat-raised-button color="primary" type="submit" style="background-color: #4a39ac; width: 100%;" (click)="uploadData()">Sign up</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.nav-down a{
+    text-decoration: none;
+    color: #333385;
+    font-size: 14px;
+}
+
+.nav-down span{
+    font-size: 12px;
+}
+
+.nav-down mat-icon{
+    color: #b6b6c9;
+    vertical-align: -8px;
+    size: 3px;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: yellow; 
+    font-size: 20px;
+  }

@@ -1,0 +1,733 @@
+<div style="background-color:#f5f7fa; height: 100%;">
+    <div class="my-5">.</div>
+    <div class="container anyclass">
+        <div class="sidebar">
+            <a class="" routerLink="/admin/dashboard">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>home</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p> <strong>Dashboard</strong> </p>
+                    </div>
+
+                </div> </a>
+
+            <a class="" routerLink="/admin/appointments">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>schedules</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Appointments</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/admin/patients">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>pregnant_woman</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Patients</p>
+                    </div>
+
+                </div> </a>
+                <a class="" routerLink="/admin/users">
+                    <div class="row">
+                        <div class="col-2">
+                            <mat-icon>people_outline</mat-icon>
+                        </div>
+                        <div class="col" style="text-align: left;">
+                            <p>Manage Users</p>
+                        </div>
+    
+                    </div> </a>
+                    <a class="" routerLink="/admin/blocked">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-icon>block</mat-icon>
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                <p>Blocked Patients</p>
+                            </div>
+        
+                        </div> </a>
+                <a class="" routerLink="/admin/blocked_doctors">
+                    <div class="row">
+                        <div class="col-2">
+                            <mat-icon>block</mat-icon>
+                        </div>
+                        <div class="col" style="text-align: left;">
+                            <p>Blocked Doctors</p>
+                        </div>
+    
+                    </div> </a>
+                    <a class="" routerLink="/admin/blocked_hospital">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-icon>block</mat-icon>
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                <p>Blocked Hospital</p>
+                            </div>
+                        </div> 
+                    </a>
+            <a class="" routerLink="/admin/doctors">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>search</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Doctors</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/admin/hospitals">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>business</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Hospital</p>
+                    </div>
+
+                </div> </a>
+            <a class="active" routerLink="/admin/labs">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>location_city</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Labs</p>
+                    </div>
+
+                </div> </a>
+            <a class="" (click)="logout()">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>exit_to_app</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Logout</p>
+                    </div>
+
+                </div> </a>
+        </div>
+
+
+        <!-- Page content -->
+        <div class="content card" style="padding: 15px;">
+            <h1><b>All Laboritories</b> <hr></h1>
+            <div class="row row-cols-1 row-cols-sm-2
+            row-cols-md-2">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        
+                    </div>
+                </div>
+                <div class="col mb-3" style="text-align: right;">
+                    <button routerLink="/admin/labs/add" mat-raised-button color="primary"> <strong>+</strong> Add
+                        Labs</button>
+                </div>
+            </div>
+            <div class="tobeless">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img
+                                        src="../../../assets/images/hospitalavatar.png"
+                                        style="max-height: 140px;
+                                        padding:
+                                        20px;" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="card-body"
+                                        style="padding-left:
+                                        60px;">
+                                        <h3 class="card-title"> <strong>Excell Lab</strong> </h3>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">business</mat-icon>F-10 Markaz, Islamabad</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">phone</mat-icon>+923185108806</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">mail</mat-icon>richard@example.com</small></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-4" style="padding: 5px;">
+                            <div class="row" style="text-align:
+                                center;">
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop1"
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        #000066;background-color:
+                                        #d4d4fd;
+                                        text-align: center; width:
+                                        50%;">
+                                        <mat-icon>remove_red_eye</mat-icon>
+                                        Tests Offered
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop"
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        green;background-color: rgb(196,
+                                        252,
+                                        196); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>settings</mat-icon>
+                                        Edit Details
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        red;background-color: rgb(248,
+                                        216,
+                                        216); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>cancel_presentation</mat-icon>
+                                        Block
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img
+                                        src="../../../assets/images/hospitalavatar.png"
+                                        style="max-height: 140px;
+                                        padding:
+                                        20px;" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="card-body"
+                                        style="padding-left:
+                                        60px;">
+                                        <h3 class="card-title"> <strong>Excell Lab</strong> </h3>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">business</mat-icon>F-10 Markaz, Islamabad</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">phone</mat-icon>+923185108806</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">mail</mat-icon>richard@example.com</small></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-4" style="padding: 5px;">
+                            <div class="row" style="text-align:
+                                center;">
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        mat-raised-button
+                                        routerLink='/admin/doctors'
+                                        style="color:
+                                        #000066;background-color:
+                                        #d4d4fd;
+                                        text-align: center; width:
+                                        50%;">
+                                        <mat-icon>remove_red_eye</mat-icon>
+                                        Check Doctors
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop"
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        green;background-color: rgb(196,
+                                        252,
+                                        196); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>settings</mat-icon>
+                                        Edit Details
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        red;background-color: rgb(248,
+                                        216,
+                                        216); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>cancel_presentation</mat-icon>
+                                        Block
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img
+                                        src="../../../assets/images/hospitalavatar.png"
+                                        style="max-height: 140px;
+                                        padding:
+                                        20px;" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="card-body"
+                                        style="padding-left:
+                                        60px;">
+                                        <h3 class="card-title"> <strong>Excell Lab</strong> </h3>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">business</mat-icon>F-10 Markaz, Islamabad</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">phone</mat-icon>+923185108806</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">mail</mat-icon>richard@example.com</small></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-4" style="padding: 5px;">
+                            <div class="row" style="text-align:
+                                center;">
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        mat-raised-button
+                                        routerLink='/admin/doctors'
+                                        style="color:
+                                        #000066;background-color:
+                                        #d4d4fd;
+                                        text-align: center; width:
+                                        50%;">
+                                        <mat-icon>remove_red_eye</mat-icon>
+                                        Check Doctors
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop"
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        green;background-color: rgb(196,
+                                        252,
+                                        196); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>settings</mat-icon>
+                                        Edit Details
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        red;background-color: rgb(248,
+                                        216,
+                                        216); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>cancel_presentation</mat-icon>
+                                        Block
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img
+                                        src="../../../assets/images/hospitalavatar.png"
+                                        style="max-height: 140px;
+                                        padding:
+                                        20px;" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="card-body"
+                                        style="padding-left:
+                                        60px;">
+                                        <h3 class="card-title"> <strong>Excell Lab</strong> </h3>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">business</mat-icon>F-10 Markaz, Islamabad</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">phone</mat-icon>+923185108806</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">mail</mat-icon>richard@example.com</small></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-4" style="padding: 5px;">
+                            <div class="row" style="text-align:
+                                center;">
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        mat-raised-button
+                                        routerLink='/admin/doctors'
+                                        style="color:
+                                        #000066;background-color:
+                                        #d4d4fd;
+                                        text-align: center; width:
+                                        50%;">
+                                        <mat-icon>remove_red_eye</mat-icon>
+                                        Check Doctors
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop"
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        green;background-color: rgb(196,
+                                        252,
+                                        196); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>settings</mat-icon>
+                                        Edit Details
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        red;background-color: rgb(248,
+                                        216,
+                                        216); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>cancel_presentation</mat-icon>
+                                        Block
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img
+                                        src="../../../assets/images/hospitalavatar.png"
+                                        style="max-height: 140px;
+                                        padding:
+                                        20px;" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="card-body"
+                                        style="padding-left:
+                                        60px;">
+                                        <h3 class="card-title"> <strong>Excell Lab</strong> </h3>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">business</mat-icon>F-10 Markaz, Islamabad</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">phone</mat-icon>+923185108806</small></p>
+                                        <p class="card-text"
+                                            style="margin:
+                                            0px;"><small
+                                                class="text-muted">
+                                                <mat-icon
+                                                    style="font-size:
+                                                    15px;">mail</mat-icon>richard@example.com</small></p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-4" style="padding: 5px;">
+                            <div class="row" style="text-align:
+                                center;">
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        mat-raised-button
+                                        routerLink='/admin/doctors'
+                                        style="color:
+                                        #000066;background-color:
+                                        #d4d4fd;
+                                        text-align: center; width:
+                                        50%;">
+                                        <mat-icon>remove_red_eye</mat-icon>
+                                        Check Doctors
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop"
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        green;background-color: rgb(196,
+                                        252,
+                                        196); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>settings</mat-icon>
+                                        Edit Details
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding:
+                                    5px;">
+                                    <a
+                                        mat-raised-button
+                                        routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                                        style="color:
+                                        red;background-color: rgb(248,
+                                        216,
+                                        216); text-align: center; width:
+                                        50%;">
+                                        <mat-icon>cancel_presentation</mat-icon>
+                                        Block
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="staticBackdropLabel"
+                    style="text-align: center;"><strong>Laboritory Details</strong>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Hospital Name</mat-label>
+                    <input matInput type="text" value="Excel Laboritory">
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>City</mat-label>
+                    <input matInput type="text" value="Islamabad">
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Offered Tests</mat-label>
+                    <mat-select multiple>
+                      <mat-option value="1">ENT</mat-option>
+                      <mat-option value="1">CT Scan</mat-option>
+                      <mat-option value="1">Blood CP</mat-option>
+                      <mat-option value="1">Urine DR</mat-option>
+                      <mat-option value="1">Ultra Sound</mat-option>
+                      <mat-option value="1">X-Ray</mat-option>
+                      <mat-option value="1">MRI</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input matInput type="text" value="F-10 Markaz">
+                  </mat-form-field>
+
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Contact</mat-label>
+                    <input matInput type="text" value="+923185108806">
+                  </mat-form-field>
+                  
+
+            </div>
+            <div class="modal-footer">
+                <a
+                    mat-raised-button
+                    routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                    data-bs-dismiss="modal"
+                    style="color:
+                    #000066;background-color:
+                    #d4d4fd;
+                    text-align: center;">
+                    <mat-icon>settings</mat-icon>
+                    Update
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="staticBackdropLabel"
+                    style="text-align: center;"><strong>Offered Tests</strong>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Offered Tests</mat-label>
+                    <mat-select multiple>
+                      <mat-option value="1">ENT</mat-option>
+                      <mat-option value="1">CT Scan</mat-option>
+                      <mat-option value="1">Blood CP</mat-option>
+                      <mat-option value="1">Urine DR</mat-option>
+                      <mat-option value="1">Ultra Sound</mat-option>
+                      <mat-option value="1">X-Ray</mat-option>
+                      <mat-option value="1">MRI</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+            </div>
+            <div class="modal-footer">
+                <a
+                    mat-raised-button
+                    routerLink='/http://localhost:4200/doctor/pakistan/islamabad/dermatologist'
+                    data-bs-dismiss="modal"
+                    style="color:
+                    #000066;background-color:
+                    #d4d4fd;
+                    text-align: center;">
+                    <mat-icon>settings</mat-icon>
+                    Update
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,245 @@
+<div style="background-color: #EFF0F2; padding-top: 10px;">
+    <div class="container" style="margin-top: 50px;">
+        <div class="nav-down mt-3">
+            <a href="">HOME</a> <span>
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </span>
+            <a href="">PAKISTAN</a> <span>
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </span>
+            <a href="">{{location | uppercase}}</a> <span>
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </span>
+            <a href="">{{skill | uppercase}}</a><span>
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </span>
+            <b style="font-size: 10px; font-style: normal;">{{name | uppercase}}</b>
+        </div>
+    </div>
+
+    <div>
+        <div class="container mt-3">
+            <mat-card class="card mb-3" style="max-width: 1200px;">
+                <div class="row g-0">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-3" >
+                                
+                                <mat-icon style="font-size: 200px;">person</mat-icon>
+                                
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body" style="padding-top: 0px;">
+                            <h2 class="card-title" style="margin-bottom: 0px;">{{name}}
+                                <span
+                                    style="margin-left: 0px; background-color: #EFF0F2; color: black; font-size: 12px; margin-top: 0px;"
+                                    class="position-absolute badge rounded-pill">
+                                    <img src="https://oladoc.com/dist/images/pmc-verified.svg"> Verified
+                                </span>
+                            </h2>
+                            <p class="card-text" style="margin-bottom: 0px;">{{education}} ({{skill}})</p>
+                            <hr>
+                            <table cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td style="padding-left: 0px; color: #8C9196;">Wait Time</td>
+                                    <td style="color: #8C9196;">Experience</td>
+                                    <td style="color: #8C9196;">Satisfied Patients</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #232426; padding-left: 0px; font-weight: bold;">
+                                        <h2 style="font-size: 14px; margin-bottom: 0px;">Under 15 Min</h2>
+                                    </td>
+                                    <td style="color: #232426; font-weight: bold;">
+                                        <h2 style="font-size: 14px; margin-bottom: 0px;">{{experience}} Years</h2>
+                                    </td>
+                                    <td style="color: #232426; font-weight: bold;">
+                                        <h2 style="font-size: 14px; margin-bottom: 0px;">100% (24)</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                            <hr>
+
+                            <table cellspacing="0" cellpadding="0">
+                                <tr class="flex">
+                                    <td style="padding-left: 0px;" class="flex">
+                                        <mat-icon
+                                            style="font-size: 16px; width: 19px; padding-top: 6px; color:#6C757D;">
+                                            headset</mat-icon>
+                                        <h2 style="font-size: 14px; margin-bottom: 0px;">Priorty customer support</h2>
+                                    </td>
+                                    <td class="flex" style="color: #232426; font-weight: bold;">
+                                        <mat-icon
+                                            style="font-size: 14px; width: 15px;  padding-top: 6px; color:#6C757D;">lock
+                                        </mat-icon>
+                                        <h2 style="font-size: 14px; margin-bottom: 0px;">100% Secure web</h2>
+                                    </td>
+                                    <td class="flex" style="color: #232426; font-weight: bold;">
+                                        <mat-icon
+                                            style="font-size: 13px; width: 15px;  padding-top: 7px; color:#6C757D;">
+                                            watch_later</mat-icon>
+                                        <h2 style="font-size: 14px; margin-bottom: 0px;">Book Appointmet in 30 sec</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-4 ">
+                        <mat-card class="example-card ">
+                            <mat-card-title style="font-size: 23px;">{{hospital_name}}</mat-card-title>
+                            <!-- <mat-card-subtitle>.</mat-card-subtitle> -->
+                            <mat-card-content style="margin-bottom: 0px;">
+                                <div class="flex mt-3" style="justify-content: space-between;">
+                                    <p style="color: #6C757D;">Physical Consultation: </p>
+                                    <p>Rs: {{pfees}}</p>
+                                </div>
+                                <hr>
+                                <div class="flex mt-3" style="justify-content: space-between;">
+                                    <p style="color: #6C757D;">Online Consultation: </p>
+                                    <p>Rs: {{cfees}}</p>
+                                </div>
+                                <hr>
+                                <div class="flex" style="justify-content: space-between;">
+                                    <p style="color: #6C757D;">Address: </p>
+                                    <p>
+                                        <mat-icon
+                                            style="font-size: 20px; width: 20px; color: #6C757D; vertical-align: -5px;">
+                                            location_on</mat-icon>
+                                        <a href=""
+                                            style="text-decoration: none; color: #232426;">{{hospital_address}}</a>
+                                    </p>
+                                </div>
+                            </mat-card-content>
+                            <mat-card-actions style="text-align: center; padding-top: 0px;">
+                                <button routerLink="booknow"
+                                    style="margin-top: 0px; background-color:#000066; width: 100%;" mat-raised-button
+                                    color="primary">Book Appointment Now</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <div class="container">
+        <mat-tab-group mat-stretch-tabs style="background-color: white;"
+            class="example-stretched-tabs mat-elevation-z4">
+            <mat-tab label="Info">
+                <div class="container" style="padding:20px;">
+                    <h2>About {{name}}</h2>
+                    <p>{{about}}</p>
+                </div>
+            </mat-tab>
+            <mat-tab label="FAQ">
+                <div class="container" style="padding: 20px;">
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 style="margin-bottom:0px" class="accordion-header" id="panelsStayOpen-headingone">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseone" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseone">
+                                    What is the fee of {{name}}?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseone" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingone">
+                                <div class="accordion-body">
+                                    <p>{{name}} fee is Rs. {{pfees}} for Physical Consultation and {{cfees}} for Online Consultation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 style="margin-bottom:0px" class="accordion-header" id="panelsStayOpen-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    What is the experience of {{name}}?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingTwo">
+                                <div class="accordion-body">
+                                    <p>{{name}} has {{experience}} years of experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 style="margin-bottom:0px" class="accordion-header" id="panelsStayOpen-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    What is the feedback of {{name}}?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree">
+                                <div class="accordion-body">
+                                    <p>100% users had a positive experience with {{name}}.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 style="margin-bottom:0px" class="accordion-header" id="panelsStayOpen-headingThree1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree1" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree1">
+                                    What is the education of {{name}}?
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree1" class="accordion-collapse collapse"
+                                aria-labelledby="panelsStayOpen-headingThree1">
+                                <div class="accordion-body">
+                                    <p>{{name}} has the following degrees: M.B.B.S., {{skill}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3></h3>
+                </div>
+            </mat-tab>
+            <mat-tab label="Reviews">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="offer-dedicated-body-left">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade active show" id="pills-reviews" role="tabpanel"
+                                    aria-labelledby="pills-reviews-tab">
+                                    <div
+                                        class="bg-white rounded shadow-sm p-4 mb-4 restaurant-detailed-ratings-and-reviews">
+                                        <h2 class="mb-1">All Ratings and Reviews</h2>
+                                        <hr>
+                                        <div class="reviews-members pt-4 pb-4">
+                                            <div class="media">
+                                                <a><img alt="Generic placeholder image"
+                                                        src="http://bootdey.com/img/Content/avatar/avatar1.png"
+                                                        class="mr-3 rounded-pill"></a>
+                                                <div class="media-body">
+                                                    <div class="reviews-members-header">
+                                                        <h4 class="mb-1"><a class="text-black">Singh Osahan</a></h4>
+                                                        <p class="text-gray">Tue, 20 Mar 2020</p>
+                                                    </div>
+                                                    <div class="reviews-members-body">
+                                                        <p>Contrary to popular belief, Lorem Ipsum is not simply random
+                                                            text. It has roots in a piece of classical Latin literature
+                                                            from 45 BC, making it over 2000 years old. Richard
+                                                            McClintock, a Latin professor at Hampden-Sydney College in
+                                                            Virginia, looked up one of the more obscure Latin words,
+                                                            consectetur, from a Lorem Ipsum passage, and going through
+                                                            the cites of the word in classical literature, discovered
+                                                            the undoubtable source. Lorem Ipsum comes from sections </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

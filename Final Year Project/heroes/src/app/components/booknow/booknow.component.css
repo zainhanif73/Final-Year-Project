@@ -1,0 +1,32 @@
+.tobe .card {
+    border-radius: 25px;
+    box-shadow:0 5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
+}
+
+.tobeless .card {
+    border-radius: 15px;
+    box-shadow:0 5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
+}
+
+mat-form-field {
+    margin-right: 12px;
+}
+
+input[type="radio"]{
+    vertical-align: baseline;
+}
+
+.display{
+    display: none;
+}
+.cclass{
+    margin: 0px 20px;
+}
+
+@media screen and (max-width:765px){
+
+    .cclass{
+        margin: 0px;
+    }
+    
+}

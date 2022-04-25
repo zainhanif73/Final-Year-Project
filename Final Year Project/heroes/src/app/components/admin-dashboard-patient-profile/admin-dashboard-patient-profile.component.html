@@ -1,0 +1,170 @@
+<div style="background-color:#f5f7fa; height: 100%;">
+    <div class="my-5">.</div>
+    <div class="container anyclass">
+        <div class="sidebar">
+            <a class="" routerLink="/admin/dashboard">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>home</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p> <strong>Dashboard</strong> </p>
+                    </div>
+
+                </div> </a>
+
+            <a class="" routerLink="/admin/appointments">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>schedules</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Appointments</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/admin/patients">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>pregnant_woman</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Patients</p>
+                    </div>
+
+                </div> </a>
+                <a class="active" routerLink="/admin/users">
+                    <div class="row">
+                        <div class="col-2">
+                            <mat-icon>people_outline</mat-icon>
+                        </div>
+                        <div class="col" style="text-align: left;">
+                            <p>Edit Users</p>
+                        </div>
+    
+                    </div> </a>
+                    <a class="" routerLink="/admin/blocked">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-icon>block</mat-icon>
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                <p>Blocked Patients</p>
+                            </div>
+        
+                        </div> </a>
+                <a class="" routerLink="/admin/blocked_doctors">
+                    <div class="row">
+                        <div class="col-2">
+                            <mat-icon>block</mat-icon>
+                        </div>
+                        <div class="col" style="text-align: left;">
+                            <p>Blocked Doctors</p>
+                        </div>
+    
+                    </div> </a>
+                    <a class="" routerLink="/admin/blocked_hospital">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-icon>block</mat-icon>
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                <p>Blocked Hospital</p>
+                            </div>
+                        </div> 
+                    </a>
+            <a class="" routerLink="/admin/doctors">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>search</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Doctors</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/admin/hospitals">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>business</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Hospital</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/admin/labs">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>location_city</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Labs</p>
+                    </div>
+
+                </div> </a>
+            <a class="" (click)="logout()">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>exit_to_app</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Logout</p>
+                    </div>
+
+                </div> </a>
+        </div>
+
+
+        <!-- Page content -->
+        <div class="content card" style="padding: 15px;">
+            <h1><b>All Patients</b>
+                <hr>
+            </h1>
+
+            <form [formGroup]="getDataForm">
+                <div class="example-form">
+
+                    <h2><b>Personal Details</b></h2>
+                    <mat-form-field class="example-half-width" appearance="fill">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput placeholder="Ex. Ahmed Muhammad" formControlName="name" value="Ahmed Muhammad">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-half-width" appearance="fill">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput placeholder="Ex. 03185108806" formControlName="contact" value="03185108806">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-half-width" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="example@gmeil.com" formControlName="email" value="ahmedmunim2000.am@gmail.com">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-half-width" appearance="fill">
+                        <mat-label>Gender</mat-label>
+                        <mat-select value="Male" formControlName="gender">
+                            <mat-option value="Female">Female</mat-option>
+                            <mat-option value="Male">Male</mat-option>
+                            
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-half-width" appearance="fill">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" value="vazzak*984" formControlName="password">
+                        <button mat-icon-button matSuffix (click)="hide= !hide" [attr.aria-label]="'Hide password'"
+                            [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+            </form>
+            <button mat-raised-button style="background-color:#000066; color: white; width: 40%;" (click)="updatePatient(path)"> 
+                <a style="text-decoration: none; color: white;">
+                    Update
+                </a>
+            </button>
+        </div>
+    </div>
+</div>

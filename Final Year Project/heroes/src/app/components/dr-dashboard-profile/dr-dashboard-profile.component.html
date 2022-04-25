@@ -1,0 +1,524 @@
+<div style="background-color:#f5f7fa; height: 100%;">
+  <div class="my-5">.</div>
+  <div class="container anyclass">
+    <div class="sidebar">
+      <a class="" routerLink="/doctor/dashboard">
+        <div class="row">
+          <div class="col-2">
+
+            <mat-icon>home</mat-icon>
+          </div>
+          <div class="col" style="text-align: left;">
+            <p> <strong>Dashboard</strong> </p>
+          </div>
+
+        </div> </a>
+
+      <a class="" routerLink="/doctor/appointments">
+        <div class="row">
+          <div class="col-2">
+            <mat-icon>schedules</mat-icon>
+          </div>
+          <div class="col" style="text-align: left;">
+            <p>Physical Appointments</p>
+          </div>
+
+        </div> </a>
+      <a class="" routerLink="/doctor/online">
+        <div class="row">
+          <div class="col-2">
+            <mat-icon>schedules</mat-icon>
+          </div>
+          <div class="col" style="text-align: left;">
+            <p>Online Appointments</p>
+          </div>
+
+        </div> </a>
+      <a class="" routerLink="/doctor/patients">
+        <div class="row">
+          <div class="col-2">
+            <mat-icon>search</mat-icon>
+          </div>
+          <div class="col" style="text-align: left;">
+            <p>My Patients</p>
+          </div>
+
+        </div> </a>
+      <a class="active" routerLink="/doctor/profile">
+        <div class="row">
+          <div class="col-2">
+            <mat-icon>settings</mat-icon>
+          </div>
+          <div class="col" style="text-align: left;">
+            <p>Edit Profile</p>
+          </div>
+
+        </div> </a>
+      <a class="" routerLink="/" (click)="logout()">
+        <div class="row">
+          <div class="col-2">
+            <mat-icon>exit_to_app</mat-icon>
+          </div>
+          <div class="col" style="text-align: left;">
+            <p>Logout</p>
+          </div>
+
+        </div> </a>
+    </div>
+
+    <!-- Page content -->
+    <Form [formGroup]="getDoctorData">
+      <div class="content card" style="padding: 15px;">
+        <h1><b>My Profile</b>
+          <hr>
+        </h1>
+
+        <div class="example-form">
+          <h2><b>Personal Details</b></h2>
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>Full Name</mat-label>
+            <input matInput placeholder="Ex. Ahmed Muhammad"
+              formControlName="name" value="Ahmed Muhammad">
+          </mat-form-field>
+
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>Contact Number</mat-label>
+            <input matInput placeholder="Ex. 03185108806"
+              formControlName="contact" value="03185108806">
+          </mat-form-field>
+
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>CNIC No.</mat-label>
+            <input matInput value="5440081119015" formControlName="cnic">
+          </mat-form-field>
+
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="example@gmeil.com"
+              formControlName="email" value="ahmedmunim2000.am@gmail.com">
+          </mat-form-field>
+
+          <mat-form-field class="example-quarter-width" appearance="fill">
+            <mat-label>Gender</mat-label>
+            <mat-select value="Male" formControlName="gender">
+              <mat-option value="Female">Female</mat-option>
+              <mat-option value="Male">Male</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-quarter-width" appearance="fill">
+            <mat-label>Martial Status</mat-label>
+            <mat-select value="Single" formControlName="m_status">
+              <mat-option value="Single">Single</mat-option>
+              <mat-option value="Married">Married</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-quarter-width" appearance="fill">
+            <mat-label>Language</mat-label>
+            <mat-select value="Sindhi" formControlName="language">
+              <mat-option value="Urdu">Urdu</mat-option>
+              <mat-option value="English">English</mat-option>
+              <mat-option value="Sindhi">Sindhi</mat-option>
+              <mat-option value="Punjabi">Punjabi</mat-option>
+              <mat-option value="Pashto">Pashto</mat-option>
+              <mat-option value="Balochi">Balochi</mat-option>
+              <mat-option value="Siraiki">Siraiki</mat-option>
+              <mat-option value="Hindko">Hindko</mat-option>
+              <mat-option value="Other">Other</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>Brief Intduction of Yours</mat-label>
+            <textarea matInput formControlName="about" placeholder="Ex. It makes
+              me feel..."
+              value="I have a love of Web Development and IT in general that I
+              bring to all my work. I am meticulous and am always learning more
+              about my field to both stay current and to expand on my skills. I
+              have about 6 years of
+              experience working in this field plus a couple more years setting
+              up websites and doing programming while I was learning, I have a
+              real love of IT and Web Development. I find the whole field
+              endlessly
+              fascinating. I have a problem-solving attitude so bring on your
+              problems and I will get them fixed. I am able to add on new needed
+              skills and knowledge very quickly."></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'"
+              formControlName="password" value="vazzak*984">
+            <button mat-icon-button matSuffix (click)="hide= !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <hr>
+          <h2><b>Professional Details</b></h2>
+
+          <mat-form-field class="example-quarter-width" appearance="fill">
+            <mat-label>City</mat-label>
+            <mat-select disableRipple value="Islamabad"
+              formControlName="city_id">
+              <mat-option value="Islamabad">Islamabad</mat-option>
+              <mat-option value="Lahore">Lahore</mat-option>
+              <mat-option value="Wahcantt">Wahcantt</mat-option>
+              <mat-option value="Karachi">Karachi</mat-option>
+              <mat-option value="Multan">Multan</mat-option>
+              <mat-option value="Hyderabad">Hyderabad</mat-option>
+              <mat-option value="Faisalabad">Faisalabad</mat-option>
+              <mat-option value="Bahawalpur">Bahawalpur</mat-option>
+              <mat-option value="Rawalpindi">RawalPindi</mat-option>
+              <mat-option value="Peshawar">Peshawar</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-quarter-width" appearance="fill">
+            <mat-label>Specialization</mat-label>
+            <mat-select disableRipple value="Pediatrician"
+              formControlName="major_id">
+              <mat-option value="Cardiologist">Cardiologist</mat-option>
+              <mat-option value="Chiropractor">Chiropractor</mat-option>
+              <mat-option value="Consultant Physician">Consultant Physician</mat-option>
+              <mat-option value="Cosmetic">Cosmetic Dentist</mat-option>
+              <mat-option value="Cosmetologist">Cosmetologist</mat-option>
+              <mat-option value="Counselor">Counselor</mat-option>
+              <mat-option value="Dentist">Dentist</mat-option>
+              <mat-option value="Dermatologist">Dermatologist</mat-option>
+              <mat-option value="Diabetologist">Diabetologist</mat-option>
+              <mat-option value="Dietitian">Dietitian</mat-option>
+              <mat-option value="ENT">ENT Specialist</mat-option>
+              <mat-option value="Eye Specialist">Eye Specialist</mat-option>
+              <mat-option value="Eye">Eye Surgeon</mat-option>
+              <mat-option value="Family">Family Physician</mat-option>
+              <mat-option value="Gastroenterologist">Gastroenterologist</mat-option>
+              <mat-option value="General Physician">General Physician</mat-option>
+              <mat-option value="General Surgeon">General Surgeon</mat-option>
+              <mat-option value="Gynecologist">Gynecologist</mat-option>
+              <mat-option value="Homeopath">Homeopath</mat-option>
+              <mat-option value="Nephrologist">Nephrologist</mat-option>
+              <mat-option value="Neurologist">Neurologist</mat-option>
+              <mat-option value="Neurosurgeon">Neurosurgeon</mat-option>
+              <mat-option value="Nutritionist">Nutritionist</mat-option>
+              <mat-option value="Obstetrician">Obstetrician</mat-option>
+              <mat-option value="Operative">Operative Dentist</mat-option>
+              <mat-option value="Orthopedic">Orthopedic Surgeon</mat-option>
+              <mat-option value="Pediatrician">Pediatrician</mat-option>
+              <mat-option value="Physiotherapist">Physiotherapist</mat-option>
+              <mat-option value="Plastic">Plastic Surgeon</mat-option>
+              <mat-option value="Psychiatrist">Psychiatrist</mat-option>
+              <mat-option value="Psychologist">Psychologist</mat-option>
+              <mat-option value="Pulmonologist">Pulmonologist</mat-option>
+              <mat-option value="Radiologist">Radiologist</mat-option>
+              <mat-option value="Rheumatologist">Rheumatologist</mat-option>
+              <mat-option value="Thoracic">Thoracic Surgeon</mat-option>
+              <mat-option value="Urologist">Urologist</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-quarter-width" appearance="fill">
+            <mat-label>Experience (Years)</mat-label>
+            <mat-select disableRipple value="1" formControlName="experience">
+              <mat-option value="1">1 Years</mat-option>
+              <mat-option value="2">2 Years</mat-option>
+              <mat-option value="3">3 Years</mat-option>
+              <mat-option value="4">4 Years</mat-option>
+              <mat-option value="5">5 Years</mat-option>
+              <mat-option value="6">6 Years</mat-option>
+              <mat-option value="7">7 Years</mat-option>
+              <mat-option value="8">8 Years</mat-option>
+              <mat-option value="9">9 Years</mat-option>
+              <mat-option value="10">10 Years</mat-option>
+              <mat-option value="11">11 Years</mat-option>
+              <mat-option value="12">12 Years</mat-option>
+              <mat-option value="13">13 Years</mat-option>
+              <mat-option value="14">14 Years</mat-option>
+              <mat-option value="15">15 Years</mat-option>
+              <mat-option value="16">16 Years</mat-option>
+              <mat-option value="17">17 Years</mat-option>
+              <mat-option value="18">18 Years</mat-option>
+              <mat-option value="19">19 Years</mat-option>
+              <mat-option value="20">20 Years</mat-option>
+              <mat-option value="More">More</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>Qualification</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..."
+              formControlName="education" value="have a love of Web Development
+              and IT in general
+              that I bring to all my work. I am meticulous and am
+              always learning more about my field to both stay current
+              and to expand on my skills. I have about 6 years of
+              experience working in this field plus a couple more
+              years setting up websites and doing programming while I
+              was learning, I have a real love of IT and Web
+              Development. I find the whole field endlessly
+              fascinating. I have a problem-solving attitude so bring
+              on your problems and I will get them fixed. I am able to
+              add on new needed skills and knowledge very quickly."></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>Membership in Commitee</mat-label>
+            <textarea matInput placeholder="Ex. It makes me feel..."
+              formControlName="prof_membership" value="have a love of Web
+              Development and IT in general
+              that I bring to all my work. I am meticulous and am
+              always learning more about my field to both stay current
+              and to expand on my skills. I have about 6 years of
+              experience working in this field plus a couple more
+              years setting up websites and doing programming while I
+              was learning, I have a real love of IT and Web
+              Development. I find the whole field endlessly
+              fascinating. I have a problem-solving attitude so bring
+              on your problems and I will get them fixed. I am able to
+              add on new needed skills and knowledge very quickly."></textarea>
+          </mat-form-field>
+
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>Hospital</mat-label>
+            <mat-select disableRipple value="Shifa" formControlName="h_id">
+              <mat-option value="Islamabad Diagnostic Center">Islamabad
+                Diagnostic Center</mat-option>
+              <mat-option value="Shifa">Shifa</mat-option>
+              <mat-option value="Karachi Hospital">Karachi Hospital</mat-option>
+              <mat-option value="Maroof">Al-Maroof</mat-option>
+              <mat-option value="Quaid">Quaid-e-Azam Hospital</mat-option>
+              <mat-option value="Other">Other</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="example-half-width" appearance="fill">
+            <mat-label>Hospital Name (If Not Exist)</mat-label>
+            <input matInput>
+          </mat-form-field>
+
+          <hr>
+          <h2><b>Fee & Availability Details</b></h2>
+
+          <h2 style="text-align: center; margin: 0px;"> <b>Fee Details</b> </h2>
+          <div style="text-align: center; padding-bottom: 15px;"><small>Check
+              slots according to your availability</small></div>
+
+          <div class="list-group mx-0" style="user-select: auto;">
+            <label class="list-group-item gap-2" style="user-select:
+              auto;">
+              <input class="form-check-input flex-shrink-0" type="checkbox"
+                value=""
+                [checked]="this.getDoctorData.value.pfees" style="user-select:
+                auto;">
+              <span style="user-select: auto;">
+
+                <h3>Physical Consultancy</h3>
+
+
+                <mat-form-field class="example-full-width" appearance="fill"
+                  floatLabel="always">
+                  <mat-label>Fee</mat-label>
+                  <input matInput type="number" class="example-right-align"
+                    formControlName="pfees" placeholder="0">
+                  <span matPrefix>Rs&nbsp;</span>
+                  <span matSuffix>.00</span>
+                </mat-form-field>
+
+              </span>
+            </label>
+            <label class="list-group-item gap-2" style="user-select:
+              auto;">
+              <input class="form-check-input flex-shrink-0" type="checkbox"
+                value="" style="user-select: auto;"
+                [checked]="this.getDoctorData.value.cfees">
+              <span style="user-select: auto;">
+                <h3>Online Consultancy</h3>
+
+                <mat-form-field class="example-full-width" appearance="fill"
+                  floatLabel="always">
+                  <mat-label>Fee</mat-label>
+                  <input matInput type="number" class="example-right-align"
+                    formControlName="cfees" placeholder="0">
+                  <span matPrefix>Rs&nbsp;</span>
+                  <span matSuffix>.00</span>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Select Bank</mat-label>
+                  <mat-select disableRipple formControlName="bank">
+                    <mat-option value="Advans Microfinance Bank">Advans Microfinance Bank</mat-option>
+                    <mat-option value="Al Baraka Islamic Bank Limited">Al Baraka Islamic Bank Limited</mat-option>
+                    <mat-option value="Allied  Bank Limited">Allied Bank Limited</mat-option>
+                    <mat-option value="Apna  Microfinance Bank">Apna Microfinance Bank</mat-option>
+                    <mat-option value="Askari  Commertial Bank Limited">Askari Commertial Bank Limited</mat-option>
+                    <mat-option value="Bank Al-Habib Limited">Bank Al-Habib Limited</mat-option>
+                    <mat-option value="Bank Alfalah Limited">Bank Alfalah Limited</mat-option>
+                    <mat-option value="Bank of Khyber">Bank of Khyber</mat-option>
+                    <mat-option value="Bank of Punjab">Bank of Punjab</mat-option>
+                    <mat-option value="Bank Islami Pakistan Limited">Bank Islami Pakistan Limited</mat-option>
+                    <mat-option value="Burj Bank Limited">Burj Bank Limited</mat-option>
+                    <mat-option value="Citi Bank">Citi Bank</mat-option>
+                    <mat-option value="Dubai Islamic Bank Pakistan Limited">Dubai Islamic Bank Pakistan Limited</mat-option>
+                    <mat-option value="EasyPaisa/ Telenor Microfinance Bank">EasyPaisa/ Telenor Microfinance Bank</mat-option>
+                    <mat-option value="Faisal Bank Limited">Faisal Bank Limited</mat-option>
+                    <mat-option value="FINCA Microfinance Bank">FINCA Microfinance Bank</mat-option>
+                    <mat-option value="FINJA EMI">FINJA EMI</mat-option>
+                    <mat-option value="First Women Bank">First Women Bank</mat-option>
+                    <mat-option value="First Pay/ HBL MFB">First Pay/ HBL MFB</mat-option>
+                    <mat-option value="Habib Bank Limited">Habib Bank Limited</mat-option>
+                    <mat-option value="Habib Metropolitan Bank Limited">Habib Metropolitan Bank Limited</mat-option>
+                    <mat-option value="ICBC">ICBC</mat-option>
+                    <mat-option value="JS Bank">JS Bank</mat-option>
+                    <mat-option value="KASB Bank Limited">KASB Bank Limited</mat-option>
+                    <mat-option value="Khushhali Microfinance Bank">Khushhali Microfinance Bank</mat-option>
+                    <mat-option value="MCB Bank Limited">MCB Bank Limited</mat-option>
+                    <mat-option value="Meezan Bank Limited">Meezan Bank Limited</mat-option>
+                    <mat-option value="Jazzcash">Jazzcash</mat-option>
+                    <mat-option value="National Bank of Pakistan">National Bank of Pakistan</mat-option>
+                    <mat-option value="NAYAPAY">NAYAPAY</mat-option>
+                    <mat-option value="NBP Fund Management Limited">NBP Fund Management Limited</mat-option>
+                    <mat-option value="NRSP MFBL">NRSP MFBL</mat-option>
+                    <mat-option value="PayMax">PayMax</mat-option>
+                    <mat-option value="SadaPay">SadaPay</mat-option>
+                    <mat-option value="SAMBA">SAMBA</mat-option>
+                    <mat-option value="Silk Bank">Silk Bank</mat-option>
+                    <mat-option value="Sindh Bank">Sindh Bank</mat-option>
+                    <mat-option value="Soneri Bank Limited">Soneri Bank Limited</mat-option>
+                    <mat-option value="Standard Chartered Bank">Standard Chartered Bank</mat-option>
+                    <mat-option value="Summit Bank">Summit Bank</mat-option>
+                    <mat-option value="TAG">TAG</mat-option>
+                    <mat-option value="UBank/ UPaisa">UBank/ UPaisa</mat-option>
+                    <mat-option value="UBL Bank Limited">United Bank Limited</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Beneficiary Name</mat-label>
+                  <input type="name" matInput placeholder="Ex. Ahmed Muhammad" formControlName="beneficiary">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>IBNA/ Account Number</mat-label>
+                  <input type="number" matInput placeholder="Ex. 5884255778888527" formControlName="accountnumber">
+                </mat-form-field>
+
+              </span>
+            </label>
+          </div>
+
+
+          <h2 style="text-align: center; margin: 0px; margin-top: 10px;"> <b>Availability
+              Details</b> </h2>
+          <div style="text-align: center; padding-bottom: 15px;"><small>Check
+              slots according to your availability</small></div>
+
+          <div class="list-group mx-0" style="user-select: auto;">
+            <label class="list-group-item gap-2" style="user-select:
+              auto;">
+              <input class="form-check-input flex-shrink-0" type="checkbox"
+                value="" style="user-select: auto;">
+              <span style="user-select: auto;">
+                <h3>Morning Slot</h3>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Start Time</mat-label>
+                  <mat-select value="9" formControlName="m_start">
+                    <mat-option value="9">9:00 AM</mat-option>
+                    <mat-option value="9.3">9:30 AM</mat-option>
+                    <mat-option value="10">10:00 AM</mat-option>
+                    <mat-option value="10.3">10:30 AM</mat-option>
+                    <mat-option value="11">11:00 AM</mat-option>
+                    <mat-option value="11.3">11:30 AM</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>End Time</mat-label>
+                  <mat-select disableRipple formControlName="m_end">
+                    <mat-option value="9.3">9:30 AM</mat-option>
+                    <mat-option value="10">10:00 AM</mat-option>
+                    <mat-option value="10.3">10:30 AM</mat-option>
+                    <mat-option value="11">11:00 AM</mat-option>
+                    <mat-option value="11.3">11:30 AM</mat-option>
+                    <mat-option value="12">12:00 AM</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+              </span>
+            </label>
+            <label class="list-group-item gap-2" style="user-select:
+              auto;">
+              <input class="form-check-input flex-shrink-0" type="checkbox"
+                style="user-select: auto;">
+              <span style="user-select: auto;">
+                <h3>Afternoon Slot</h3>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Start Time</mat-label>
+                  <mat-select disableRipple formControlName="a_start">
+                    <mat-option value="2">2:00 PM</mat-option>
+                    <mat-option value="2.3">2:30 PM</mat-option>
+                    <mat-option value="3">3:00 PM</mat-option>
+                    <mat-option value="3.3">3:30 PM</mat-option>
+                    <mat-option value="4">4:00 PM</mat-option>
+                    <mat-option value="4.3">4:30 PM</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>End Time</mat-label>
+                  <mat-select disableRipple formControlName="a_end">
+                    <mat-option value="2.3">2:30 PM</mat-option>
+                    <mat-option value="3">3:00 PM</mat-option>
+                    <mat-option value="3.3">3:30 PM</mat-option>
+                    <mat-option value="4">4:00 PM</mat-option>
+                    <mat-option value="4.3">4:30 PM</mat-option>
+                    <mat-option value="5">5:00 PM</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+              </span>
+            </label>
+            <label class="list-group-item gap-2" style="user-select:
+              auto;">
+              <input class="form-check-input flex-shrink-0" type="checkbox"
+                style="user-select: auto;">
+              <span style="user-select: auto;">
+                <h3>Evening Slot</h3>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Start Time</mat-label>
+                  <mat-select disableRipple formControlName="e_start">
+                    <mat-option value="6">6:00 PM</mat-option>
+                    <mat-option value="6.3">6:30 PM</mat-option>
+                    <mat-option value="7">7:00 PM</mat-option>
+                    <mat-option value="7.3">7:30 PM</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>End Time</mat-label>
+                  <mat-select disableRipple formControlName="e_end">
+                    <mat-option value="6.3">6:30 PM</mat-option>
+                    <mat-option value="7">7:00 PM</mat-option>
+                    <mat-option value="7.3">7:30 PM</mat-option>
+                    <mat-option value="8">8:00 PM</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </span>
+            </label>
+          </div>
+        </div>
+        <button mat-raised-button style="background-color: #000066; color:
+          white; width: 50%;"
+          (click)="updateRecord()">
+          <a style="text-decoration: none; color: white;">Update</a>
+        </button>
+
+      </div>
+    </Form>
+  </div>
+</div>

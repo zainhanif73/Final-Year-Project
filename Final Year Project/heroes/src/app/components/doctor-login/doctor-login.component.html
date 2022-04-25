@@ -1,0 +1,39 @@
+<div style="background-color:#f5f7fa; height: 100%;">
+    <div class="my-5">.</div>
+    <div>
+        <div class="modal-dialog tobe" role="document">
+            <div class="modal-content card">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <!-- <h5 class="modal-title">Modal title</h5> -->
+                    <h1>
+                        <Strong>Signin to</Strong><strong style="color:
+                            #4a39ac;"> Clinic</strong> <strong style="color:
+                            #ffbf00;">ea</strong>
+                    </h1>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-4" name="username" id="floatingInput"
+                                placeholder="name@example.com" [(ngModel)] = "username">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-4" name="password" id="floatingPassword" placeholder="Password" [(ngModel)] = "password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <a mat-raised-button style="background-color:#000066; color: white; width: 100%; padding: 5px; font-size: 15px;" 
+                            (click)="checkLogin()">
+                            <a style="text-decoration: none; color: white;">Signin</a>
+                        </a>
+                        <br><br>
+                        <small class="text-muted">Don't have an account?
+                            <a routerLink="/doctor/signup" style="text-decoration:
+                                none; color: #4a39ac;"> <strong> Click Here</strong></a> to Signup</small>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

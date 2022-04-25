@@ -1,0 +1,109 @@
+<div>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top"
+  style=" border: 1px solid rgb(187, 187, 187); background-color: white;">
+  <div class="container-xxl container header" style="background-color: white; ">
+    <a class="navbar-brand" routerLink="" style="font-size: 30px;  margin-right: 60px;"> <strong
+        style="color: #4a39ac;">Clinic</strong><strong style="color: #ffbf00;">ea</strong></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Doctors
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="pakistan/doctor">Find by Specialization</a></li>
+            <li><a class="dropdown-item" routerLink="pakistan/doctor">Find by Disease</a></li>
+            <li><a class="dropdown-item" routerLink="pakistan/islamabad/hospital">Find by Hospital</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Hospitals
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="pakistan/Lahore/hospital">Lahore</a></li>
+            <li><a class="dropdown-item" routerLink="pakistan/Islamabad/hospital">Islamabad</a></li>
+            <li><a class="dropdown-item" routerLink="pakistan/Karachi/hospital">Karachi</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" routerLink="pakistan/All/hospital">View All Hospitals</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Labs & Diagnostics
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="pakistan/labs">Lahore</a></li>
+            <li><a class="dropdown-item" routerLink="pakistan/labs">Islamabad</a></li>
+            <li><a class="dropdown-item" routerLink="pakistan/labs">Rawalpindi</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" routerLink="pakistan/labs">View All Labs</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="healthcare"> Health Blog</a>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <div class="collapse navbar-collapse show" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" [class.display]="!check">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px;">
+                {{User}}
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" (click)="profile()" >Profile</a></li>
+                <li><a class="dropdown-item" (click)="appointments()" >All Appointments</a></li>
+                <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+        <a [class.display]="check" style="color: black; font-size: 15px; border:1px solid rgb(155, 151, 151);"
+          mat-button [matMenuTriggerFor]="belowMenu">Login/signup</a>
+        
+          <mat-menu #belowMenu="matMenu" yPosition="below" style="background-color: white;">
+          <a mat-menu-item routerLink="/patient/login"><a style="text-decoration: none; color: black; font-size: 18px;"
+              routerLink="/patient/login">Patient</a></a>
+          <a mat-menu-item routerLink="/doctor/login"><a style="text-decoration: none; color: black; font-size: 18px;"
+              routerLink="/doctor/login">Doctor</a></a>
+        </mat-menu>
+
+        <button mat-flat-button
+          style="border-radius: 1ch; ; margin-left: 15px; background:#000066; max-height: 36px; padding: 0px 10px;">
+          <a routerLink="" style="color: #ffff; text-decoration: none;">
+            <mat-icon style="padding-top: 3px; transform: scale(0.8); color: #ffff; vertical-align: text-bottom;">
+              local_phone</mat-icon>
+            &nbsp;04238900938
+          </a>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+</div>
+
+<router-outlet></router-outlet>
+
+<app-footer *ngIf="router.url !== '/admin/doctors' && router.url !== '/patient/login'
+            && router.url !== '/patient/login' && router.url !== '/doctor/login'
+            && router.url !== '/admin' && router.url !== '/admin/dashboard'
+            && router.url !=='/admin/appointments' && router.url !=='/admin/patients' && router.url !=='/admin/users'
+            && router.url !=='/admin/blocked' && router.url !=='/admin/hospitals' && '/admin/doctors/profile/'.match(router.url)
+"></app-footer>

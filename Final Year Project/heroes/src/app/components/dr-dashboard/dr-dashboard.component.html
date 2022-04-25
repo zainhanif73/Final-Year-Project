@@ -1,0 +1,118 @@
+<div style="background-color:#f5f7fa; height: 100%;">
+    <div class="my-5">.</div>
+    <div class="container anyclass">
+        <div class="sidebar">
+            <a class="active" routerLink="/doctor/dashboard">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>home</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p> <strong>Dashboard</strong> </p>
+                    </div>
+
+                </div> </a>
+
+            <a class="" routerLink="/doctor/appointments">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>schedules</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Physical Appointments</p>
+                    </div>
+
+                </div> </a>
+
+            <a class="" routerLink="/doctor/online">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>schedules</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Online Appointments</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/doctor/patients">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>search</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>My Patients</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/doctor/profile">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>settings</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Edit Profile</p>
+                    </div>
+
+                </div> </a>
+            <a class="" (click)="logout()" routerLink="/">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>exit_to_app</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Logout</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Page content -->
+        <div class="content card" style="padding: 15px;">
+            <h2><b>Hi Dr Ahmed Muhammad</b> <hr></h2>
+
+            <div class="tobe" style="padding: 10px;">
+                <div class="row row-cols-1 row-cols-sm-1
+                    row-cols-md-1 row-cols-lg-3" style="text-align: center;
+                    background-color:
+                    rgb(241, 240, 240); padding: 10px;">
+
+                    <div class="col">
+                        <div class="row" style="padding: 10px;">
+                            <div class="col-3" style="font-size: 25px;
+                                font-weight: 450; text-align: center;">
+                                {{totalPatient}} </div>
+                            <div class="col-5" style="font-size: 15px;
+                                font-weight: 450; text-align: left;">Pending
+                                Patient </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="row" style="padding: 10px;">
+                            <div class="col-3" style="font-size: 25px;
+                                font-weight: 450; text-align: center;">
+                                {{totalAppointments}} </div>
+                            <div class="col-5" style="font-size: 15px;
+                                font-weight: 450; text-align: left;"> My
+                                Patients</div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="row" style="padding: 10px;">
+                            <div class="col-4" style="font-size: 25px;
+                                font-weight: 450; text-align: center;"> 100%
+                            </div>
+                            <div class="col-5" style="font-size: 15px;
+                                font-weight: 450; text-align: left;">Profile
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

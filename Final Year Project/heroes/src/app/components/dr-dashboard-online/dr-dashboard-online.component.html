@@ -1,0 +1,344 @@
+<div style="background-color:#f5f7fa; height: 100%;">
+    <div class="my-5">.</div>
+    <div class="container anyclass">
+        <div class="sidebar">
+            <a class="" routerLink="/doctor/dashboard">
+                <div class="row">
+                    <div class="col-2">
+
+                        <mat-icon>home</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p> <strong>Dashboard</strong> </p>
+                    </div>
+
+                </div>
+            </a>
+
+            <a class="" routerLink="/doctor/appointments">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>schedules</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Physical Appointments</p>
+                    </div>
+
+                </div>
+            </a>
+
+            <a class="active" routerLink="/doctor/online">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>schedules</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Online Appointments</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/doctor/patients">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>search</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>My Patients</p>
+                    </div>
+
+                </div>
+            </a>
+            <a class="" routerLink="/doctor/profile">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>settings</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Edit Profile</p>
+                    </div>
+
+                </div>
+            </a>
+            <a class="" (click)="logout()" routerLink="/">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>exit_to_app</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Logout</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Page content -->
+        <div class="content card" style="padding: 15px;">
+            <h1><b>Online Appointments</b>
+                <hr>
+            </h1>
+
+            <div class="tobeless">
+                <div class="card mb-3" *ngFor="let item of items">
+                    <!-- <div class="card mb-3" *ngFor="let item of items"> -->
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img
+                                        src="../../../assets/images/patientavatar.png"
+                                        style="max-height: 140px; padding:
+                                        20px;" alt="">
+                                </div>
+                                <div class="col">
+                                    <div class="card-body" style="padding-left:
+                                        60px;">
+                                        <h3 class="card-title"> <strong>{{item.p_id.name}}</strong>
+                                        </h3>
+                                        <p class="card-text" style="margin:
+                                            0px;"><small class="text-muted">
+                                                <mat-icon style="font-size:
+                                                    15px;">schedules</mat-icon>{{item.date}},
+                                                {{item.time%1==0?(item.time+':00 PM'):((item.time-0.2999999999999998)+':30 PM')}}
+                                            </small></p>
+                                        <p class="card-text" style="margin:
+                                            0px;"><small class="text-muted">
+                                                <mat-icon style="font-size:
+                                                    15px;">phone</mat-icon>{{item.p_id.contact}}
+                                            </small></p>
+                                        <p class="card-text" style="margin:
+                                            0px;"><small class="text-muted">
+                                                <mat-icon style="font-size:
+                                                    15px;">mail</mat-icon>{{item.p_id.email}}
+                                            </small></p>
+                                        <!-- <p class="card-text" style="margin: 0px;"><small class="text-muted"> <mat-icon style="font-size: 15px;">schedules</mat-icon>14 Nov 2019, 10.00 AM</small></p> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4" style="padding: 5px;">
+                            <div class="row" style="text-align: center;">
+                                <div class="col-12" style="padding: 5px;">
+                                    <a mat-raised-button data-bs-toggle="modal"
+                                        data-bs-target="#staticBackdrop" (click)="viewPatientData(item.p_id.id, item.id)"
+                                        style="color:
+                                        #000066;background-color: #d4d4fd;
+                                        text-align: center; width: 70%;">
+                                        <mat-icon>remove_red_eye</mat-icon>
+                                        View
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding: 5px;">
+                                    <a mat-raised-button style="color:
+                                        green;background-color: rgb(196, 252,
+                                        196); text-align: center; width: 70%;" (click)="completeAppointment(item.id)">
+                                        <mat-icon>done_all</mat-icon>
+                                        Completed
+                                    </a>
+                                </div>
+                                <div class="col-12" style="padding: 5px;">
+                                    <a mat-raised-button style="color:
+                                        red;background-color: rgb(248, 216,
+                                        216); text-align: center; width: 70%;" (click)="cancelAppointment(item.id)">
+                                        <mat-icon>cancel_presentation</mat-icon>
+                                        Cancel
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="staticBackdropLabel"
+                    style="text-align: center;"><strong>Patient
+                        Details</strong>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Patients ID :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.id}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Full Name :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.name}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Username :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.username}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Email :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.email}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Contact No.
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.contact}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Gender
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.gender}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Address
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.address}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>CNIC
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.cnic}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Proof Of Payment
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{getproof}}</div>
+                </div>
+                <div class="row" *ngIf="check==false">
+                    <div class="col" style="text-align: left;"><b>Link : </b> </div>
+                    <a class="col" style="text-align: right;" target="_blank" href="{{receieveLink}}">Click Here To Join Meeting After Sending Link </a>
+                </div>
+                
+                <div class="modal-footer">
+                    <div class="col-12" style="padding: 5px; text-align: center;">
+                        <a mat-raised-button *ngIf="check==true" (click)="checkPayment(temp2.b_id,temp2.id)" style="color:
+                            green;background-color: rgb(196, 252,
+                            196); text-align: center; width: 70%;">
+                            <mat-icon>done_all</mat-icon>
+                            Approve Payment
+                        </a>
+                        <a mat-raised-button *ngIf="check==false" style="color:
+                            green;background-color: rgb(196, 252,
+                            196); text-align: center; width: 70%;">
+                            <mat-icon>done_all</mat-icon>
+                            Link Sent To Patient
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="staticBackdropLabel"
+                    style="text-align: center;"><strong>Payment
+                        Details</strong>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Beneficiary
+                            Name :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">Ahmed Muhammad</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Account Number
+                            :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">181654986519865121</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Transaction
+                            ID/ Proof Message :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">Your HBL A/C
+                        0072***95203 has been debited with PKR 10,000.00 on
+                        30/03/2022 13:51:54 for ATM Cash Withdrawal. Remaining
+                        balance is PKR 9,849.69.</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

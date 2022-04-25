@@ -1,0 +1,166 @@
+<div style="background-color:#f5f7fa; height: 100%;">
+    <div class="my-5">.</div>
+    <div class="container anyclass">
+        <div class="sidebar">
+            <a class="" routerLink="/admin/dashboard">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>home</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p> <strong>Dashboard</strong> </p>
+                    </div>
+
+                </div> </a>
+
+            <a class="" routerLink="/admin/appointments">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>schedules</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Appointments</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/admin/patients">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>pregnant_woman</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Patients</p>
+                    </div>
+
+                </div> </a>
+                <a class="" routerLink="/admin/users">
+                    <div class="row">
+                        <div class="col-2">
+                            <mat-icon>people_outline</mat-icon>
+                        </div>
+                        <div class="col" style="text-align: left;">
+                            <p>Manage Users</p>
+                        </div>
+    
+                    </div> </a>
+                    <a class="" routerLink="/admin/blocked">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-icon>block</mat-icon>
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                <p>Blocked Patients</p>
+                            </div>
+        
+                        </div> </a>
+                <a class="" routerLink="/admin/blocked_doctors">
+                    <div class="row">
+                        <div class="col-2">
+                            <mat-icon>block</mat-icon>
+                        </div>
+                        <div class="col" style="text-align: left;">
+                            <p>Blocked Doctors</p>
+                        </div>
+    
+                    </div> </a>
+                    <a class="" routerLink="/admin/blocked_hospital">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-icon>block</mat-icon>
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                <p>Blocked Hospital</p>
+                            </div>
+                        </div> 
+                    </a>
+            <a class="" routerLink="/admin/doctors">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>search</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Doctors</p>
+                    </div>
+
+                </div> </a>
+            <a class="active" routerLink="/admin/hospitals">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>business</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Add Hospital</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/admin/labs">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>location_city</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Labs</p>
+                    </div>
+
+                </div> </a>
+            <a class="" (click)="logout()">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>exit_to_app</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Logout</p>
+                    </div>
+
+                </div> </a>
+        </div>
+
+
+        <!-- Page content -->
+        <div class="content card" style="padding: 15px;">
+            <h1><b>Hospital Details</b><hr> </h1>
+
+
+            <div class="example-form"> 
+                <form [formGroup]="getDoctorData">
+
+                <h2><b>Personal Details</b></h2>
+                <mat-form-field class="example-half-width" appearance="fill">
+                    <mat-label>Hospital Name</mat-label>
+                    <input matInput placeholder="Ex. Al-Maroof" formControlName="name">
+                </mat-form-field>
+
+                <mat-form-field class="example-half-width" appearance="fill" >
+                    <mat-label> Hospital Contact Number</mat-label>
+                    <input matInput placeholder="Ex. 03185108806" formControlName="contact">
+                </mat-form-field>
+
+                <mat-form-field class="example-half-width" appearance="fill">
+                    <mat-label>City</mat-label>
+                    <mat-select disableRipple formControlName="city">
+                        <mat-option value="Islamabad">Islamabad</mat-option>
+                        <mat-option value="Lahore">Lahore</mat-option>
+                        <mat-option value="Karachi">Karachi</mat-option>
+                        <mat-option value="Multan">Multan</mat-option>
+                        <mat-option value="Hyderabad">Hyderabad</mat-option>
+                        <mat-option value="Faisalabad">Faisalabad</mat-option>
+                        <mat-option value="Bahawalpur">Bahawalpur</mat-option>
+                        <mat-option value="RawalPindi">RawalPindi</mat-option>
+                        <mat-option value="Peshawar">Peshawar</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Location of Hospital</mat-label>
+                    <textarea matInput placeholder="Ex. Block: xyz, street# 878, Islamabad" formControlName="location"></textarea>
+                </mat-form-field>
+
+                <div class="example-full-width" style="text-align: right; margin-top: 10px;">
+                    <button mat-raised-button color="primary" (click)="addHospital()">Add Hospital</button>
+                </div>
+            </form>
+            </div>
+
+        </div>
+    </div>
+</div>

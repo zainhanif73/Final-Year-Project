@@ -1,0 +1,440 @@
+<p>booknow works!</p>
+<div style="background-color: #f5f7fa;">
+        <div class="my-4">.</div>
+        <div class="container">
+                <main>
+                        <div class="row g-5">
+                                <div class="col-md-8 ">
+                                        <div class="tobe">
+                                                <div class="card row g-0 overflow-hidden
+                                                flex-md-row mb-4 shadow-sm
+                                                h-md-250 position-relative">
+                                                        <div class="col-auto d-none
+                                                        d-lg-block">
+                                                                <img src="../../../assets/images/docavatar.jpg" alt=""
+                                                                        style="max-width:
+                                                                200px;
+                                                                max-height:
+                                                                200px;">
+                                                        </div>
+
+                                                        <div class="col p-4 d-flex
+                                                        flex-column
+                                                        position-static">
+                                                                <div><strong
+                                                                                style="color:
+                                                                        #4a39ac; font-size: 17px;">Clinic</strong><strong
+                                                                                style="color:
+                                                                        #ffbf00; font-size: 17px;">ea</strong></div>
+
+                                                                <h3 class="mb-0" style="padding-top:
+                                                                5px;
+                                                                padding-bottom:
+                                                                5px;"><strong>{{sendLink.d_id.name}}</strong>
+                                                                </h3>
+
+                                                                <div class="mb-1
+                                                                text-muted"> MBBS ({{field}})
+                                                                </div>
+
+                                                                <p class="card-text
+                                                                mb-auto" style="padding-bottom:
+                                                                5px;padding-top:
+                                                                5px; ">Physcial Fee: {{sendLink.d_id.pfees}}</p>
+
+                                                                <p class="card-text
+                                                                mb-auto" style="padding-bottom:
+                                                                5px;padding-top:
+                                                                5px; ">Online Fee: {{sendLink.d_id.cfees}}</p>
+
+                                                                <a mat-flat-button style="
+                                                                        border-radius: 1ch;
+                                                                        background-color:#4a39ac;
+                                                                        padding: 0px 10px; 
+                                                                        width:50%;" href={{linkToGo}}>
+                                                                        <a style="color:#ffff; text-decoration:none;">
+                                                                                Visit Profile
+                                                                        </a>
+                                                                </a>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="card my-4" style="padding:15px;">
+                                                <h1 style="text-align: center;">
+                                                        <strong>Appointment For</strong>
+                                                </h1>
+                                                <div>
+                                                        <div class="cclass ">
+                                                                <div class="list-group mx-0" style="user-select:auto;">
+                                                                        <label class="list-group-item d-flex card gap-2"
+                                                                                style="user-select: auto;">
+                                                                                <label style="text-align: center;">
+                                                                                        <input class="form-check-input flex-shrink-0"
+                                                                                                type="radio"
+                                                                                                name="listGroupRadios"
+                                                                                                checked
+                                                                                                (click)="checkdiv()"
+                                                                                                id="listGroupRadios1"
+                                                                                                value="checked"
+                                                                                                style="user-select:auto; margin-right: 20px;">
+                                                                                        <span style="font-size: 25px;">For
+                                                                                                MySelf....</span>
+                                                                                </label>
+
+                                                                                <span style="user-select: auto;"
+                                                                                        [class.display]="check">
+                                                                                        <div style="padding: 30px;">
+                                                                                                <h3 class="my-0"
+                                                                                                        style="user-select: auto;">
+                                                                                                        Patient Name :
+                                                                                                        <small class="text-muted"
+                                                                                                                style="user-select: auto;">
+                                                                                                                {{sendLink.p_id.name}}</small>
+                                                                                                </h3>
+                                                                                                <h3 class="my-0"
+                                                                                                        style="user-select: auto;">
+                                                                                                        Patient Contact
+                                                                                                        : <small class="text-muted"
+                                                                                                                style="user-select: auto;">{{sendLink.p_id.contact}}</small>
+                                                                                                </h3>
+                                                                                        </div>
+                                                                                </span>
+                                                                        </label>
+                                                                        <label
+                                                                                class="list-group-item d-flex card gap-2">
+                                                                                <label style="text-align: center;">
+                                                                                        <input class="form-check-input
+                                                                                        flex-shrink-0" type="radio"
+                                                                                                name="listGroupRadios"
+                                                                                                id="listGroupRadios2"
+                                                                                                value="Someone Else"
+                                                                                                (click)="checkdiv()"
+                                                                                                style="user-select:auto; margin-right: 20px;">
+                                                                                        <span style="font-size: 25px;">For
+                                                                                                Someone</span>
+                                                                                </label>
+                                                                                <div style="align-items: center; text-align: center;"
+                                                                                        [class.display]="!check">
+                                                                                        <mat-form-field
+                                                                                                appearance="fill">
+                                                                                                <mat-label>Patient Name
+                                                                                                </mat-label>
+                                                                                                <input matInput>
+                                                                                        </mat-form-field>
+                                                                                        <mat-form-field
+                                                                                                appearance="fill">
+                                                                                                <mat-label>Relation
+                                                                                                </mat-label>
+                                                                                                <mat-select>
+                                                                                                        <mat-option
+                                                                                                                value="brother">
+                                                                                                                Brother
+                                                                                                        </mat-option>
+                                                                                                        <mat-option
+                                                                                                                value="daughter">
+                                                                                                                Daughter
+                                                                                                        </mat-option>
+                                                                                                        <mat-option
+                                                                                                                value="father">
+                                                                                                                Father
+                                                                                                        </mat-option>
+                                                                                                        <mat-option
+                                                                                                                value="mother">
+                                                                                                                Mother
+                                                                                                        </mat-option>
+                                                                                                        <mat-option
+                                                                                                                value="sister">
+                                                                                                                Sister
+                                                                                                        </mat-option>
+                                                                                                        <mat-option
+                                                                                                                value="spouse">
+                                                                                                                Spouse
+                                                                                                        </mat-option>
+                                                                                                        <mat-option
+                                                                                                                value="son">
+                                                                                                                Son
+                                                                                                        </mat-option>
+                                                                                                        <mat-option
+                                                                                                                value="other">
+                                                                                                                Other
+                                                                                                        </mat-option>
+                                                                                                </mat-select>
+                                                                                        </mat-form-field>
+                                                                                        <mat-form-field
+                                                                                                appearance="fill">
+                                                                                                <mat-label>Gender
+                                                                                                </mat-label>
+                                                                                                <mat-select>
+                                                                                                        <mat-option
+                                                                                                                value="male">
+                                                                                                                Male
+                                                                                                        </mat-option>
+                                                                                                        <mat-option
+                                                                                                                value="female">
+                                                                                                                Female
+                                                                                                        </mat-option>
+                                                                                                        <mat-option
+                                                                                                                value="non">
+                                                                                                                Prefer
+                                                                                                                not to
+                                                                                                                say
+                                                                                                        </mat-option>
+
+                                                                                                </mat-select>
+                                                                                        </mat-form-field>
+                                                                                        <mat-form-field
+                                                                                                appearance="fill">
+                                                                                                <mat-label>Patient's
+                                                                                                        Contact
+                                                                                                </mat-label>
+                                                                                                <input matInput>
+                                                                                        </mat-form-field>
+                                                                                </div>
+                                                                        </label>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="card my-4" style="padding: 15px;">
+                                                <form [formGroup]="payment1">
+                                                        <h1 style="text-align: center;">
+                                                                <strong>Payment Method</strong>
+                                                        </h1>
+                                                        <div>
+                                                                <div class="cclass">
+                                                                        <div class="list-group
+                                                                        mx-0 " style="user-select:
+                                                                        auto;">
+                                                                                <label class="list-group-item
+                                                                                d-flex card
+                                                                                gap-2" style="user-select:
+                                                                                auto;">
+                                                                                        <input class="form-check-input
+                                                                                        flex-shrink-0" type="radio"
+                                                                                                name="listGroupRadios1"
+                                                                                                (click)="checkdiv1()"
+                                                                                                id="listGroupRadios3"
+                                                                                                value="" style="user-select:
+                                                                                        auto;">
+                                                                                        <span style="user-select:
+                                                                                        auto;">
+                                                                                                <div class="row">
+                                                                                                        <div
+                                                                                                                class="col">
+                                                                                                                <h2
+                                                                                                                        style="width: 100%;">
+                                                                                                                        <mat-icon>
+                                                                                                                                money
+                                                                                                                        </mat-icon>
+                                                                                                                        Pay
+                                                                                                                        at
+                                                                                                                        Clinic
+                                                                                                                </h2>
+                                                                                                        </div>
+                                                                                                        <div class="col"
+                                                                                                                style="text-align: right;">
+                                                                                                                <b>Rs.
+                                                                                                                        {{sendLink.d_id.pfees}}</b>
+                                                                                                        </div>
+                                                                                                </div>
+
+                                                                                        </span>
+                                                                                </label>
+                                                                                <label class="list-group-item
+                                                                                d-flex card
+                                                                                gap-2" style="user-select:
+                                                                                auto;">
+                                                                                        <input class="form-check-input
+                                                                                        flex-shrink-0" type="radio"
+                                                                                                name="listGroupRadios1"
+                                                                                                id="listGroupRadios4"
+                                                                                                value="Someone Else"
+                                                                                                (click)="checkdiv1()"
+                                                                                                style="user-select:
+                                                                                        auto;">
+                                                                                        <span style="user-select:
+                                                                                        auto;">
+
+                                                                                                <div class="row">
+                                                                                                        <div
+                                                                                                                class="col">
+                                                                                                                <h2
+                                                                                                                        style="width: 100%;">
+                                                                                                                        <mat-icon>
+                                                                                                                                credit_card
+                                                                                                                        </mat-icon>
+                                                                                                                        Pay
+                                                                                                                        Online
+                                                                                                                </h2>
+                                                                                                        </div>
+                                                                                                        <div class="col"
+                                                                                                                style="text-align: right;">
+                                                                                                                <b>Rs.
+                                                                                                                        {{sendLink.d_id.cfees}}</b>
+                                                                                                        </div>
+                                                                                                </div>
+
+                                                                                        </span>
+
+                                                                                        <span style="user-select: auto;"
+                                                                                                [class.display]="!check1">
+                                                                                                <div
+                                                                                                        style="padding: 20px;">
+                                                                                                        <h3 class="my-0"
+                                                                                                                style="user-select: auto;">
+                                                                                                                Beneficiary Name :
+                                                                                                                <small class="text-muted"
+                                                                                                                        style="user-select: auto;">{{bankHolderName}}</small>
+                                                                                                        </h3>
+                                                                                                        <h3 class="my-0"
+                                                                                                                style="user-select: auto;">
+                                                                                                                Bank Name :
+                                                                                                                <small class="text-muted"
+                                                                                                                        style="user-select: auto;">{{bankname}}</small>
+                                                                                                        </h3>
+                                                                                                        <h3 class="my-0"
+                                                                                                                style="user-select: auto;">
+                                                                                                                Account
+                                                                                                                Number
+                                                                                                                : <small class="text-muted"
+                                                                                                                        style="user-select: auto;">{{bankaccount}}</small>
+                                                                                                        </h3>
+
+                                                                                                </div>
+                                                                                                <mat-form-field
+                                                                                                        class="example-full-width"
+                                                                                                        style="width: 100%;"
+                                                                                                        appearance="fill">
+                                                                                                        <mat-label>Proof of Payment
+                                                                                                        </mat-label>
+                                                                                                        <textarea
+                                                                                                                matInput
+                                                                                                                formControlName="proof"
+                                                                                                                placeholder="Tranaction ID/ Text Message by bank"></textarea>
+                                                                                                </mat-form-field>
+                                                                                        </span>
+
+                                                                                </label>
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </form>
+                                        </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                        <div class="position-sticky" style="top:2rem;">
+                                                <form [formGroup]="getData">
+                                                        <div class="p-4 mb-3 card tobeless">
+                                                                <h1 class="fst-italic">Select Time And Date</h1>
+                                                                <mat-form-field appearance="fill">
+                                                                        <mat-label>Value binding</mat-label>
+                                                                        <input matInput [matDatepicker]="picker3"
+                                                                                [value]="12/12/2022"
+                                                                                formControlName="date">
+                                                                        <mat-datepicker-toggle matSuffix
+                                                                                [for]="picker3">
+                                                                        </mat-datepicker-toggle>
+                                                                        <mat-datepicker #picker3></mat-datepicker>
+                                                                </mat-form-field>
+
+                                                                <div class="list-group mx-0 card"
+                                                                        style="user-select: auto;">
+                                                                        <label class="list-group-item d-flex gap-2"
+                                                                                style="user-select: auto;">
+                                                                                <input class="form-check-input flex-shrink-0"
+                                                                                        type="radio"
+                                                                                        name="listGroupRadios2"
+                                                                                        id="listGroupRadios1" value=""
+                                                                                        checked=""
+                                                                                        style="user-select: auto;">
+                                                                                <span style="user-select: auto;">
+                                                                                        Morning Slot
+                                                                                        <mat-form-field 
+                                                                                                appearance="fill">
+                                                                                                <mat-label>Time 
+                                                                                                </mat-label>
+                                                                                                <mat-select 
+                                                                                                        disableRipple
+                                                                                                        formControlName="time" >
+                                                                                                        <mat-option *ngFor="let item of mSlot"
+                                                                                                                value="{{item.value}}">
+                                                                                                                {{item.Show}}
+                                                                                                        </mat-option>
+                                                                                                </mat-select>
+                                                                                        </mat-form-field>
+                                                                                </span>
+                                                                        </label>
+                                                                        <label class="list-group-item d-flex gap-2"
+                                                                                style="user-select: auto;">
+                                                                                <input class="form-check-input flex-shrink-0"
+                                                                                        type="radio"
+                                                                                        name="listGroupRadios2"
+                                                                                        id="listGroupRadios2" value=""
+                                                                                        style="user-select: auto;">
+                                                                                <span style="user-select: auto;">
+                                                                                        Afternoon Slot
+                                                                                        <mat-form-field
+                                                                                                appearance="fill">
+                                                                                                <mat-label>Time
+                                                                                                </mat-label>
+                                                                                                <mat-select
+                                                                                                        disableRipple
+                                                                                                        formControlName="time">
+                                                                                                        <mat-option *ngFor="let item of aSlot"
+                                                                                                                value="{{item.value}}">
+                                                                                                                {{item.Show}}
+                                                                                                        </mat-option>
+                                                                                                
+                                                                                                </mat-select>
+                                                                                        </mat-form-field>
+                                                                                </span>
+                                                                        </label>
+                                                                        <label class="list-group-item d-flex gap-2"
+                                                                                style="user-select: auto;">
+                                                                                <input class="form-check-input flex-shrink-0"
+                                                                                        type="radio"
+                                                                                        name="listGroupRadios2"
+                                                                                        id="listGroupRadios3" value=""
+                                                                                        style="user-select: auto;">
+                                                                                <span style="user-select: auto;">
+                                                                                        Evening Slot
+                                                                                        <mat-form-field
+                                                                                                appearance="fill">
+                                                                                                <mat-label>Time
+                                                                                                </mat-label>
+                                                                                                <mat-select
+                                                                                                        disableRipple 
+                                                                                                        formControlName="time">
+                                                                                                        <mat-option *ngFor="let item of eSlot"
+                                                                                                                value="{{item.value}}">
+                                                                                                                {{item.Show}}
+                                                                                                        </mat-option>
+                                                                                                </mat-select>
+                                                                                        </mat-form-field>
+                                                                                </span>
+                                                                        </label>
+                                                                </div>
+                                                        </div>
+                                                </form>
+                                                <div class="p-4 card">
+                                                        <h1 class="fst-italic">Confirm Booking</h1>
+                                                        <p>Check all the details before booking appointment. Invalid
+                                                                data or unfilled data will lead to cancellation of
+                                                                appointment </p>
+                                                        <button mat-flat-button (click)="checkpayment()"
+                                                                style="border-radius: 1ch; background:#FFBF00; padding: 0px 10px;">
+                                                                <a style="color: #ffff; text-decoration: none;">
+                                                                        Book Now
+                                                                </a>
+                                                        </button>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </main>
+        </div>
+</div>

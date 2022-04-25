@@ -1,0 +1,277 @@
+<div class="my-5" style="background-color: #f5f7fa;">
+    <div class="container">
+        <div class="background my-5" style="background-color: #000066;">
+
+            <h3 style="color: white; padding: 45px 0px; font-size: 30px;
+                    text-align: center;">
+                Find and book the <span style="color: #ffbf00;">best doctors</span>
+                near you
+            </h3>
+            <div class="container" style="width: 65%;">
+                <form [formGroup]="getInputData">
+                        <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">
+                                        <mat-icon style="color: #000066;"> my_location
+                                        </mat-icon>
+                                </span>
+                                <input type="text" class="form-control" formControlName="city"
+                                        placeholder="Enter locality or city" list="exampleList"
+                                        aria-label="Username" aria-describedby="basic-addon1">
+                                <datalist id="exampleList">
+                                        <option value="Wahcantt">
+                                        <option value="Rawalpindi">
+                                        <option value="Gujrawala">
+                                </datalist>
+                        </div>
+
+                        <div class="input-group" style="padding-bottom: 90px;">
+                                <input type="text" class="form-control" formControlName="spec"
+                                        placeholder="Search For Specialties, Services, Diseases"
+                                        aria-label="Recipient's username"
+                                        aria-describedby="basic-addon2" list="exampleList1">
+                                <datalist id="exampleList1">
+                                        <option value="Dermatologist">
+                                        <option value="Dentist">
+                                </datalist>
+                                <button class="input-group-text" type="submit" id="basic-addon2"
+                                        style="background-color: #ff9900;
+            color: white;" (click)="onClick()">Search</button>
+                        </div>
+
+                </form>
+        </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+<div class="container">
+    <h1 class="pb-2 border-bottom" style="font-size: 30px; margin-bottom: 30px;
+        color: #000066;">
+        <strong>
+            Reach Out Best Doctors
+        </strong>
+    </h1>
+    <div class="row justify-content-center tobe">
+        <div class="card mb-3" style="max-width: 540px; margin-right: 15px;
+            background-color: #f5f7fa;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../../assets/images/physicalconsultant1.png" class="img-fluid rounded-start" style="height:
+                        100%; width: 100%;">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 class="card-title"> <b>Physical Consultant</b> </h1>
+                        <p class="card-text">Reach out the best Consultants in
+                            your area in lowest Fee starting from Rs.500</p>
+                        <button mat-raised-button style="background-color:
+                            #000066; color: white;" routerLink="pakistan/doctor"> <a
+                                style="text-decoration: none; color: white;">Book Now</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3" style="max-width: 540px; background-color:
+            #fff0da;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="./../assets/images/videoconsultant1.png" class="img-fluid rounded-start" alt="..." style="height:
+                        100%; width: 100%;">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h1 class="card-title"> <b>Video Consultant</b> </h1>
+                        <p class="card-text">Reach out the best Consultants in
+                            your area in lowest Fee starting from Rs.500</p>
+                        <button mat-raised-button style="background-color:
+                            #ff9900; color: white;" routerLink="pakistan/doctor"> <a
+                                style="text-decoration: none; color: white;">Book Now</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="my-4" style="background-color: #f5f7fa; padding-top: 35px;
+    justify-content: center;">
+    <div class="container tobeless">
+
+        <h1 class="pb-2 border-bottom" style="font-size: 30px; margin-bottom:
+            30px; color: #000066;">
+            <strong>
+                Join As Consultant
+            </strong>
+        </h1>
+
+        <div class="card row g-0 overflow-hidden flex-md-row mb-4
+            shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <div style="padding: 5px;"><strong style="color: #4a39ac;">Clinic</strong><strong
+                        style="color: #ffbf00;">ea</strong></div>
+
+                <h1 class="mb-0" style="padding: 5px;"> <b>Are You a Doctor?</b>
+                </h1>
+                <div class="mb-1 text-muted" style="padding: 5px;">Sign-up to
+                    reach millions of patients</div>
+
+                <ul style="padding: 5px;">
+                    <li>
+                        Get more appointments through online bookings
+                    </li>
+                    <li>
+                        Create and view patient records from anywhere
+                    </li>
+                    <li>
+                        Manage your schedule efficiently
+                    </li>
+                </ul>
+
+                <button mat-raised-button style="background-color:
+                    #000066; color: white; width: 50%; padding: 5px;" routerLink="/doctor/signup">Register
+                    Now</button>
+            </div>
+            <div class="col-5 d-none d-lg-block">
+                <img src="../../assets/images/doctors.PNG" alt="" style="max-height: 300px; width: 100%;">
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+<div class="container px-4 py-5" id="hanging-icons">
+    <h1 class="pb-2 border-bottom" style="font-size: 30px; margin-bottom: 30px;
+        color: #000066;">
+        <strong>
+            More About Us
+        </strong>
+    </h1>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                <mat-icon style="font-size: 30px;">hourglass_empty</mat-icon>
+            </div>
+            <div>
+                <h2>Search For Labs</h2>
+                <p>Search for the best labs in your city with the most latest
+                    equipments and experts in relavent field
+                    and in most reasonable rates starting from Rs.500.</p>
+                <button mat-raised-button style="background-color:
+                    #000066; color: white; width: 50%;" routerLink="/pakistan/labs">Search Now</button>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                <mat-icon style="font-size: 30px;">search</mat-icon>
+            </div>
+            <div>
+                <h2>Health Blog</h2>
+                <p>Read about different deseases and illness which are commonly
+                    spread in most of the people and their
+                    cure in our blog and many more health precautionary
+                    contents. </p>
+                <button mat-raised-button style="background-color:
+                    #000066;; color: white; width: 50%;" routerLink="/healthcare">Visit Now</button>
+            </div>
+        </div>
+        <div class="col d-flex align-items-start">
+            <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                <mat-icon style="font-size: 30px;">local_hospital</mat-icon>
+            </div>
+            <div>
+                <h2>Search For Hospitals</h2>
+                <p>Search for the best Hospitals in your city with the most
+                    latest equipments and experts consultants
+                    and in most reasonable rates starting from Rs.500.</p>
+                <button mat-raised-button style="background-color:
+                    #000066;; color: white; width: 50%;" routerLink="/pakistan/islamabad/hospital">Search Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="my-3" style="background-color: #f5f7fa; padding-top: 35px;
+    justify-content: center;">
+    <div class="container tobeless">
+
+        <h1 class="pb-2 border-bottom" style="font-size: 30px; margin-bottom:
+            30px; color: #000066;">
+            <strong>
+                Consult With Best Doctors
+            </strong>
+        </h1>
+
+        <div class="card row g-0 overflow-hidden flex-md-row mb-4
+            shadow-sm h-md-250 position-relative">
+            <div class="col-5 d-none d-lg-block" style="margin-right: 30px;">
+                <img src="../../assets/images/patients.jpg" alt="" style="max-height: 300px; width: 100%;">
+            </div>
+            <div class="col p-4 d-flex flex-column position-static">
+                <div style="padding: 5px;"><strong style="color: #4a39ac;">Clinic</strong><strong
+                        style="color: #ffbf00;">ea</strong></div>
+
+                <h1 class="mb-0" style="padding: 5px;"> <b>Want to Get In Touch
+                        With Consultants?</b>
+                </h1>
+                <div class="mb-1 text-muted" style="padding: 5px;">Sign-up to
+                    find best consultants</div>
+
+                <ul style="padding: 5px;">
+                    <li>
+                        Search for doctors by specialty, hospital, service or
+                        disease
+                    </li>
+                    <li>
+                        Select based on Experience, Fee or Rating
+                    </li>
+                    <li>
+                        Book a Confirmed Appointment within Seconds
+                    </li>
+                </ul>
+                <button mat-raised-button style="background-color:
+                #000066; color: white; width: 50%; padding: 5px;" routerLink="/patient/signup"> <a
+                        style="text-decoration: none; color: white;">Signup Now</a></button>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+<div class="container px-4 py-5" id="hanging-icons">
+    <h1 class="pb-2 border-bottom" style="font-size: 30px; margin-bottom:
+        30px; color: #000066;">
+        <strong>
+            Download Our App
+        </strong>
+    </h1>
+
+    <div class="row g-0 overflow-hidden flex-md-row mb-4
+        shadow-sm h-md-250 position-relative">
+        <div class="col-5 d-none d-lg-block" style="margin-right: 30px;">
+            <img src="../../assets/images/app.png" alt="" style="max-height: 350px; width: 100%;">
+        </div>
+        <div class="col p-4 d-flex flex-column position-static">
+            <div style="padding: 5px;"><strong style="color: #4a39ac;">Clinic</strong><strong
+                    style="color: #ffbf00;">ea</strong></div>
+
+            <h1 class="mb-0" style="padding: 5px;"> <b>Download the <strong
+                        style="color: #4a39ac;">Clinic</strong><strong style="color: #ffbf00;">ea</strong> App</b>
+            </h1>
+            <div class="mb-1 text-muted" style="padding: 15px;">Sign-up to
+                find best consultants</div>
+
+            <p style="padding-bottom: 10px;">
+                Search for doctors, specialities, treatments, hospitals and
+                services. Find doctor reviews and book appointment online, all
+                using the oladoc app.
+            </p>
+
+            <button mat-raised-button style="background-color:
+                #000066; color: white; width: 50%; padding: 5px;">Download Now</button>
+        </div>
+    </div>
+</div>

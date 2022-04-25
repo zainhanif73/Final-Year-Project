@@ -1,0 +1,835 @@
+<div style="background-color: #f5f7fa;">
+        <div class="container">
+                <main>
+                        <div class="background my-5" style="background-color: #000066;">
+                                <h3 style="color: white; padding: 45px 0px; font-size: 30px;
+                                text-align: center;">
+                                        Find and book the <span style="color: #ffbf00;">best doctors</span>
+                                        near you
+                                </h3>
+                                <div class="container" style="width: 65%;">
+                                        <form [formGroup]="getInputData">
+                                                <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon1">
+                                                                <mat-icon style="color: #000066;"> my_location
+                                                                </mat-icon>
+                                                        </span>
+                                                        <input type="text" class="form-control" formControlName="city"
+                                                                placeholder="Enter locality or city" list="exampleList"
+                                                                aria-label="Username" aria-describedby="basic-addon1">
+                                                        <datalist id="exampleList">
+                                                                <option value="Wahcantt">
+                                                                <option value="Rawalpindi">
+                                                                <option value="Gujrawala">
+                                                        </datalist>
+                                                </div>
+
+                                                <div class="input-group" style="padding-bottom: 90px;">
+                                                        <input type="text" class="form-control" formControlName="spec"
+                                                                placeholder="Search For Specialties, Services, Diseases"
+                                                                aria-label="Recipient's username"
+                                                                aria-describedby="basic-addon2" list="exampleList1">
+                                                        <datalist id="exampleList1">
+                                                                <option value="Dermatologist">
+                                                                <option value="Dentist">
+                                                        </datalist>
+                                                        <button class="input-group-text" type="submit" id="basic-addon2"
+                                                                style="background-color: #ff9900;
+                                    color: white;" (click)="onClick()">Search</button>
+                                                </div>
+
+                                        </form>
+                                </div>
+                        </div>
+
+                        <div class="row g-5">
+                                <div class="col-md-8 tobe">
+                                        <div class="card" style="padding: 15px; ">
+                                                <h1 style="text-align: center;">
+                                                        <strong>Search by Specialization</strong>
+                                                </h1>
+                                                <div>
+                                                        <div class="check">
+                                                                <div class="row row-cols-2 row-cols-sm-2
+                                                                        row-cols-md-3">
+                                                                        <div class="col" style="padding: 3px;">
+                                                                                <a mat-raised-button
+                                                                                        routerLink='{{city}}/dermatologist'
+                                                                                        style="color:
+                                                                                        #000066; width: 100%; text-align:
+                                                                                        left;">
+                                                                                        <mat-icon>face</mat-icon>
+                                                                                        Dermatologist
+                                                                                </a>
+                                                                        </div>
+                                                                        <div class="col" style="padding: 3px;">
+                                                                                <a mat-raised-button
+                                                                                        routerLink='{{city}}/Gynecologist'
+                                                                                        style="color:
+                                                                                        #000066; width: 100%; text-align:left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Gynecologist
+                                                                                </a>
+                                                                        </div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink='{{city}}/ent-specialist'
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:left;">
+                                                                                        <mat-icon>face</mat-icon>
+                                                                                        ENT Specialist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:left;">
+                                                                                        <mat-icon>child_care</mat-icon>
+                                                                                        Pediatrician
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Orthopedic"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:left;">
+                                                                                        <mat-icon>
+                                                                                                airline_seat_legroom_extra
+                                                                                        </mat-icon>
+                                                                                        Orthopedic Surgeon
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/general_physician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>card_travel</mat-icon>
+                                                                                        General Physician
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Neurologist"
+                                                                                        style="color:#000066; width: 100%; text-align: left;">
+                                                                                        <mat-icon>donut_large</mat-icon>
+                                                                                        Neurologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Urologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>gradient</mat-icon>
+                                                                                        Urologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/eye_specialist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>remove_red_eye
+                                                                                        </mat-icon>
+                                                                                        Eye Specialist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Psychiatrist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>cloud_circle
+                                                                                        </mat-icon>
+                                                                                        Psychiatrist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Dentist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work_outline
+                                                                                        </mat-icon>
+                                                                                        Dentist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/gastroenterologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>gesture</mat-icon>
+                                                                                        Gastroenterologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Cardiologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Cardiologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Pulmonologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Pulmonologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Diabetologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Diabetologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/General_Surgeon"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        General Surgeon
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Nephrologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Nephrologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Counselor"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Counselor
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Operative_Dentist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Operative Dentist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Psycologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Psycologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Cosmetologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Cosmetologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Nutritionist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Nutritionist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Homeopath"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Homeopath
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/eye_surgeon"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:             left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Eye Surgeon
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Dietitian"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Dietitian
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Neurosurgeon"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Neurosurgeon
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Chiropractor"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Chiropractor
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Thoracic_Surgeon"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Thoracic Surgeon
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Radiologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Radiologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Rheumatologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Rheumatologist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Cosmetic_Dentist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Cosmetic Dentist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Physiotherapist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Physiotherapist
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Obstetrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Obstetrician
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Plastic_Surgeon"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Plastic Surgeon
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Consultant_Physician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Consultant Physician
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Family_Physician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Family Physician
+                                                                                </a></div>
+
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="card my-4" style="padding: 15px;">
+                                                <h1 style="text-align: center;"> <strong>Desease Treatments</strong>
+                                                </h1>
+
+                                                <div>
+                                                        <div class="check">
+                                                                <div class="row row-cols-2 row-cols-sm-2
+                                    row-cols-md-3">
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Rheumatologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>face</mat-icon>
+                                                                                        Arthritis
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Cardiologist"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Hypertension
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/Neurologists"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>child_care</mat-icon>
+                                                                                        Back Ache
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>
+                                                                                                airline_seat_legroom_extra
+                                                                                        </mat-icon>
+                                                                                        Infectious Deseases
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>card_travel</mat-icon>
+                                                                                        Anemia
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>donut_large</mat-icon>
+                                                                                        Diabetes Mellitus
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>gradient</mat-icon>
+                                                                                        Skin Deseases
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>remove_red_eye
+                                                                                        </mat-icon>
+                                                                                        Menupause
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>cloud_circle
+                                                                                        </mat-icon>
+                                                                                        Sports Injury
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work_outline
+                                                                                        </mat-icon>
+                                                                                        Chiecken Pox
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>gesture</mat-icon>
+                                                                                        Abdomen Pain
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Influenza
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Diarrhea
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Cough
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Fever
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Common Cold
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Fatigue
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Pneuminia
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>pregnant_woman
+                                                                                        </mat-icon>
+                                                                                        Chest Infection
+                                                                                </a></div>
+
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="card my-4" style="padding: 15px;">
+                                                <h1 style="text-align: center;"> <strong>Hospitals</strong> </h1>
+
+                                                <div>
+                                                        <div class="check">
+                                                                <div class="row row-cols-1 row-cols-sm-1
+                                    row-cols-md-2">
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Advanced Medical Centre
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Islamabad Specialists Clinic
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Smart Medical and Diagnostics
+                                                                                        Center
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        MaxHealth Hospital
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        UHealth International Hospital
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        MM Hospital
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Islamabad International Hospital
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Islamabad Medical and Surgical
+                                                                                        Hospital
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Clinics and Diagnostics Hospital
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Advanced International Hospital
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        HM Diagnostics
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Rehman Medical Center
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Chinar International Hospital
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        MedOne Healthcare
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Capital Diagnostic Centre
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Sarf Hospital
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">
+                                                                                        <mat-icon>work</mat-icon>
+                                                                                        Capital Diagnostic Center
+                                                                                </a></div>
+                                                                        <div class="col" style="padding: 3px;"><a
+                                                                                        mat-raised-button
+                                                                                        routerLink="{{city}}/pediatrician"
+                                                                                        style="color:
+                                            #000066; width: 100%; text-align:
+                                            left;">Next <mat-icon>navigate_next</mat-icon></a></div>
+
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+                                        <div class="position-sticky" style="top: 2rem;">
+                                                <div class="p-4 mb-3 rounded card">
+                                                        <h1 class="fst-italic">About</h1>
+                                                        <p class="mb-0">Book appointments with the best Doctors and
+                                                                Specialists such as Gynecologists, Skin Specialists,
+                                                                Child Specialists, Surgeons, etc. in Pakistan
+                                                                conveniently..</p>
+                                                </div>
+
+                                                <div class="p-4 card">
+                                                        <h1 class="fst-italic">Archives</h1>
+                                                        <ul class="list-unstyled rightcard mb-0">
+                                                                <li><a routerLink="#"
+                                                                                style="text-decoration: none; color: black;">Best
+                                                                                Hospitals</a></li>
+                                                                <li><a routerLink="#"
+                                                                                style="text-decoration: none; color: black;">Best
+                                                                                Labs</a></li>
+                                                                <li><a routerLink="#"
+                                                                                style="text-decoration: none; color: black;">Health
+                                                                                Blog</a></li>
+                                                                <li><a routerLink="#"
+                                                                                style="text-decoration: none; color: black;">Contact
+                                                                                Us</a></li>
+                                                                <li><a routerLink="#"
+                                                                                style="text-decoration: none; color: black;">Best
+                                                                                Doctors</a></li>
+                                                                <li><a routerLink="#"
+                                                                                style="text-decoration: none; color: black;">Join
+                                                                                us as Doctor</a></li>
+                                                                <li><a routerLink="#"
+                                                                                style="text-decoration: none; color: black;">Video
+                                                                                Consultancy</a></li>
+                                                                <li><a routerLink="#"
+                                                                                style="text-decoration: none; color: black;">Physical
+                                                                                Consultancy</a></li>
+                                                        </ul>
+                                                </div>
+
+                                        </div>
+                                </div>
+
+
+                        </div>
+
+
+                </main>
+        </div>
+
+
+
+</div>

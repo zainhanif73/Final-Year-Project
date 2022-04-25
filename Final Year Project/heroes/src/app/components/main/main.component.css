@@ -1,0 +1,101 @@
+h3{
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+ul>li{
+    margin-left: 20px;
+}
+.flex{
+    margin-left: 35%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.flex > .btn:hover > a{
+    color: rgb(194, 189, 189);   
+}
+#resp-table {
+    overflow: auto;
+    width: 100%;
+    display: table;
+}
+#resp-table-body{
+    display: table-row-group;
+}
+.resp-table-row{
+    display: table-row;
+}
+.table-body-cell{
+    display: table-cell;
+    padding-bottom: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+.background1{
+    background-image : url('src\assets\images\bg.jpg');
+    background-size : 100% auto;
+    height: 400px;
+    width: 100%;
+}
+.input-group>.form-control, .input-group>.form-select{
+    position: relative;
+    flex : auto;
+    min-width: 0;
+}
+.flex{
+    display: flex;
+}
+.from_Input:active{
+    border: none;
+    outline:none;
+}
+.card1{
+    border: 1px solid rgb(197, 184, 184);
+}
+.grid{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(8,1fr) ;
+}
+
+.grid1{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.drop-down{
+    margin-top: 6px;
+    margin-left: 15px;
+    font-size: 20px;
+    align-items: center;
+    text-align: left;
+}
+.start{
+    margin-left: 9px;
+    margin: 10px;
+}
+.city{
+    position: relative;
+    overflow: scroll;
+    height: 400px;
+}
+.none{
+    display:none;
+}
+hr{
+    margin: 0px;
+    padding: 0px;
+}
+
+.tobe .card {
+    border-radius: 25px;
+    box-shadow:0 5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
+  }
+
+  .tobeless .card {
+    border-radius: 15px;
+    box-shadow:0 5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
+  }

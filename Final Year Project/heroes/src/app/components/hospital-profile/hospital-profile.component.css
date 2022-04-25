@@ -1,0 +1,312 @@
+.nav-down a{
+    text-decoration: none;
+    color: #333385;
+    font-size: 10px;
+}
+.nav-down span{
+    font-size: 12px;
+}
+.nav-down mat-icon{
+    color: #b6b6c9;
+    vertical-align: -8px;
+    size: 3px;
+}
+.flex{
+    display: flex;
+}
+table{
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+table tr td{    
+    padding: 0px 9px;
+    border-right: 1px solid #EFF0F2;
+}
+table tr td:last-child{
+    border-right: none;
+}
+.example-card hr{
+    margin: 6px;
+}
+body{
+    background:#dcdcdc;    
+    }
+    .total-like-user-main a {
+        display: inline-block;
+        margin: 0 -17px 0 0;
+    }
+    .total-like {
+        border: 1px solid;
+        border-radius: 50px;
+        display: inline-block;
+        font-weight: 500;
+        height: 34px;
+        line-height: 33px;
+        padding: 0 13px;
+        vertical-align: top;
+    }
+    .restaurant-detailed-ratings-and-reviews hr {
+        margin: 0 -24px;
+    }
+    .graph-star-rating-header .star-rating {
+        font-size: 17px;
+    }
+    .progress {
+        background: #f2f4f8 none repeat scroll 0 0;
+        border-radius: 0;
+        height: 30px;
+    }
+    .rating-list {
+        display: inline-flex;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .rating-list-left {
+        height: 16px;
+        line-height: 29px;
+        width: 10%;
+    }
+    .rating-list-center {
+        width: 80%;
+    }
+    .rating-list-right {
+        line-height: 29px;
+        text-align: right;
+        width: 10%;
+    }
+    .restaurant-slider-pics {
+        bottom: 0;
+        font-size: 12px;
+        left: 0;
+        z-index: 999;
+        padding: 0 10px;
+    }
+    .restaurant-slider-view-all {
+        bottom: 15px;
+        right: 15px;
+        z-index: 999;
+    }
+    .offer-dedicated-nav .nav-link.active,
+    .offer-dedicated-nav .nav-link:hover,
+    .offer-dedicated-nav .nav-link:focus {
+        border-color: #3868fb;
+        color: #3868fb;
+    }
+    .offer-dedicated-nav .nav-link {
+        border-bottom: 2px solid #fff;
+        color: #000000;
+        padding: 16px 0;
+        font-weight: 600;
+    }
+    .offer-dedicated-nav .nav-item {
+        margin: 0 37px 0 0;
+    }
+    .restaurant-detailed-action-btn {
+        margin-top: 12px;
+    }
+    .restaurant-detailed-header-right .btn-success {
+        border-radius: 3px;
+        height: 45px;
+        margin: -18px 0 18px;
+        min-width: 130px;
+        padding: 7px;
+    }
+    .text-black {
+        color: #000000;
+    }
+    .icon-overlap {
+        bottom: -23px;
+        font-size: 74px;
+        opacity: 0.23;
+        position: absolute;
+        right: -32px;
+    }
+    .menu-list img {
+        width: 41px;
+        height: 41px;
+        object-fit: cover;
+    }
+    .restaurant-detailed-header-left img {
+        width: 88px;
+        height: 88px;
+        border-radius: 3px;
+        object-fit: cover;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+    }
+    .reviews-members .media .mr-3 {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+    }
+    .rounded-pill {
+        border-radius: 50rem!important;
+    }
+    .total-like-user {
+        border: 2px solid #fff;
+        height: 34px;
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075)!important;
+        width: 34px;
+    }
+    .total-like-user-main a {
+        display: inline-block;
+        margin: 0 -17px 0 0;
+    }
+    .total-like {
+        border: 1px solid;
+        border-radius: 50px;
+        display: inline-block;
+        font-weight: 500;
+        height: 34px;
+        line-height: 33px;
+        padding: 0 13px;
+        vertical-align: top;
+    }
+    .restaurant-detailed-ratings-and-reviews hr {
+        margin: 0 -24px;
+    }
+    .graph-star-rating-header .star-rating {
+        font-size: 17px;
+    }
+    .progress {
+        background: #f2f4f8 none repeat scroll 0 0;
+        border-radius: 0;
+        height: 30px;
+    }
+    .rating-list {
+        display: inline-flex;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .rating-list-left {
+        height: 16px;
+        line-height: 29px;
+        width: 10%;
+    }
+    .rating-list-center {
+        width: 80%;
+    }
+    .rating-list-right {
+        line-height: 29px;
+        text-align: right;
+        width: 10%;
+    }
+    .restaurant-slider-pics {
+        bottom: 0;
+        font-size: 12px;
+        left: 0;
+        z-index: 999;
+        padding: 0 10px;
+    }
+    .restaurant-slider-view-all {
+        bottom: 15px;
+        right: 15px;
+        z-index: 999;
+    }
+    
+    .progress {
+        background: #f2f4f8 none repeat scroll 0 0;
+        border-radius: 0;
+        height: 30px;
+    }
+    
+    section {
+        display: table;
+      }
+      
+      .example-label {
+        display: table-cell;
+        font-size: 14px;
+        margin-left: 8px;
+        min-width: 120px;
+      }
+      
+      .example-button-row {
+        display: table-cell;
+        width: 490px;
+      }
+      
+      .example-button-row .mat-button-base {
+        margin: 8px 8px 8px 0;
+      }
+      
+      .example-flex-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      
+      .example-button-container {
+        display: flex;
+        justify-content: center;
+        width: 120px;
+      }
+    
+      .tobe a:hover
+      {
+          background-color: #dfdfdf;
+      }
+    
+      .tobe .card {
+        border-radius: 25px;
+        box-shadow:0 5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
+      }
+    
+      .rightcard li a:hover
+      {
+        color: #4a39ac;
+      }
+     
+    .pop{
+        margin-bottom: 10px; 
+        margin-top: 10px; 
+        font-size: 30px;
+    }
+
+    .textpop{
+        margin-bottom: 8px; 
+        font-size: 22px;
+    }
+
+    .topsapn{
+        margin-left: 0px; 
+        background-color: #EFF0F2; 
+        color: black; 
+        font-size: 12px;
+         margin-top: 0px;
+    }
+
+    .check{
+        margin: 0px 20px;
+    }
+
+    
+    @media screen and (max-width: 1000px){
+        .change{
+            width: 150px;
+        }
+    }
+
+    @media screen and (max-width: 500px){
+         .change{
+             /* padding: 100px; */
+             margin-top: 25px;
+             width: 110px
+         }
+         .pop{
+            font-size: 20px;;
+         }
+         .textpop{
+             font-size: 18px;
+         }
+         .topsapn{
+             display: none;
+         }
+     }
+
+     @media screen and (max-width: 430px){
+        .check{
+            margin: 0px;
+        }
+    }
+

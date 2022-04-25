@@ -1,0 +1,56 @@
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .tobe a:hover
+  {
+      background-color: #dfdfdf;
+  }
+
+  .tobe .card {
+    border-radius: 25px;
+    box-shadow:0 5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
+  }
+
+  .rightcard li a:hover
+  {
+    color: #4a39ac;
+  }
+
+  .check{
+    margin: 0px 20px;
+  }
+
+@media screen and (max-width: 430px){
+    .check{
+        margin: 0px;
+    }
+}

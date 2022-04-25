@@ -1,0 +1,132 @@
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: rgb(128, 127, 127);
+    position: fixed;
+    height: 80%;
+    overflow: auto;
+    /* border: #747475 solid 1px; */
+  }
+  
+  .sidebar a p{margin-top: 5px;}
+  
+  /* Sidebar links */
+  .sidebar a {
+    text-align: left;
+    font-weight: 600;
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #FF9E15;
+    color: white;
+  }
+  
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: rgb(99, 98, 98);;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    position: fixed;
+    height: 500px;
+    width: 70%;
+    overflow-y: scroll;
+  }
+  
+  /* For I pad */
+  @media screen and (max-width: 900px) {
+    div.content {
+      margin-left: 200px;
+      padding: 1px 16px;
+      position: fixed;
+      height: 500px;
+      width: 65%;
+      overflow-y: scroll;
+    }
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left; padding: 13px;}
+    .sidebar a p{display: none;}
+    div.content {margin-left: 0;
+      position: relative;
+      width: 100%;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .sidebar a {float: left; padding: 9px;}
+    .sidebar a p{display: none;}
+    div.content {margin-left: 0;
+      position: relative;
+      width: 100%;}
+  }
+  
+  .anyClass {
+    width:200px;
+  }
+  
+  .tobe .card {
+    border-radius: 25px;
+    box-shadow:0 5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
+  }
+  
+  .tobeless .card {
+    border-radius: 15px;
+    box-shadow:0 5px 10px rgba(154,160,185,0.05), 0 15px 40px rgba(166,173,201,0.2);
+  }
+  
+  .mat-tab-group {
+    margin-bottom: 48px;
+  }
+
+  
+  
+  .example-form {
+    min-width: 150px;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .example-half-width {
+    width: 50%;
+    padding: 5px;
+  }
+
+  .example-quarter-width {
+    width: 33%;
+    padding: 5px;
+  }
+
+  .example-quad-width {
+    width: 25%;
+    padding: 5px;
+  }

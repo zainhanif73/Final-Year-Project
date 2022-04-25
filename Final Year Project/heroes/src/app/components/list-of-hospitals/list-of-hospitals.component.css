@@ -1,0 +1,17 @@
+.nav-down a{
+    text-decoration: none;
+    color: #333385;
+    font-size: 10px;
+}
+.nav-down span{
+    font-size: 12px;
+}
+.nav-down mat-icon{
+    color: #b6b6c9;
+    vertical-align: -8px;
+    size: 3px;
+}
+
+.example-card {
+    max-width: 400px;
+}

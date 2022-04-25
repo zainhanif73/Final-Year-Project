@@ -1,0 +1,346 @@
+<div style="background-color:#f5f7fa; height: 100%;">
+    <div class="my-5">.</div>
+    <div class="container anyclass">
+        <div class="sidebar">
+            <a routerLink="/admin/dashboard">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>home</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p> <strong>Dashboard</strong> </p>
+                    </div>
+
+                </div> </a>
+
+            <a class="" routerLink="/admin/appointments">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>schedules</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Appointments</p>
+                    </div>
+
+                </div> </a>
+            <a class="active" routerLink="/admin/patients">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>pregnant_woman</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Patients</p>
+                    </div>
+
+                </div> </a>
+                <a class="" routerLink="/admin/users">
+                    <div class="row">
+                        <div class="col-2">
+                            <mat-icon>people_outline</mat-icon>
+                        </div>
+                        <div class="col" style="text-align: left;">
+                            <p>Manage Users</p>
+                        </div>
+    
+                    </div> </a>
+                    <a class="" routerLink="/admin/blocked">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-icon>block</mat-icon>
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                <p>Blocked Patients</p>
+                            </div>
+        
+                        </div> </a>
+                <a class="" routerLink="/admin/blocked_doctors">
+                    <div class="row">
+                        <div class="col-2">
+                            <mat-icon>block</mat-icon>
+                        </div>
+                        <div class="col" style="text-align: left;">
+                            <p>Blocked Doctors</p>
+                        </div>
+    
+                    </div> </a>
+                    <a class="" routerLink="/admin/blocked_hospital">
+                        <div class="row">
+                            <div class="col-2">
+                                <mat-icon>block</mat-icon>
+                            </div>
+                            <div class="col" style="text-align: left;">
+                                <p>Blocked Hospital</p>
+                            </div>
+                        </div> 
+                    </a>
+            <a class="" routerLink="/admin/doctors">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>search</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Doctors</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/admin/hospitals">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>business</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Hospital</p>
+                    </div>
+
+                </div> </a>
+            <a class="" routerLink="/admin/labs">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>location_city</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>All Labs</p>
+                    </div>
+
+                </div> </a>
+            <a class="" (click)="logout()">
+                <div class="row">
+                    <div class="col-2">
+                        <mat-icon>exit_to_app</mat-icon>
+                    </div>
+                    <div class="col" style="text-align: left;">
+                        <p>Logout</p>
+                    </div>
+
+                </div> </a>
+        </div>
+
+
+        <!-- Page content -->
+        <div class="content card" style="padding: 15px;">
+            <h1><b>All Patients</b> <hr></h1>
+            
+            <div class="tobeless">
+                
+                <div class="row row-cols-1 row-cols-sm-2
+                    row-cols-md-2 row-cols-lg-3">
+                    <div class="col" style="padding: 3px;" *ngFor="let item of items">
+                        <div class="card shadow-sm">
+                            <mat-card class="example-card">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="../../../assets/images/patientavatar.png" style="max-height: 50px;" alt="">
+                                    </div>
+                                    <div class="col">
+                                         <mat-card-title style="font-size: 15px;">{{item.p_id.name}}</mat-card-title>
+                                         <mat-card-subtitle style="font-size: 13px;"><b>Patient ID :</b>{{item.p_id.id}}</mat-card-subtitle>
+                                    </div>
+                                   
+                                </div>
+                                
+                                <mat-divider inset></mat-divider>
+                                <mat-card-content>
+
+                                    <div class="row" style="font-size: 12px;">
+                                        <div class="col-6" style="text-align: left; color: rgb(94, 93, 93); font-weight: 450;">Phone</div>
+                                        <div class="col-6" style="text-align: right; color: rgb(94, 93, 93)">{{item.p_id.contact}}</div>
+                                        <div class="col-6" style="text-align: left; color: rgb(94, 93, 93); font-weight: 450;">Date</div>
+                                        <div class="col-6" style="text-align: right; color: rgb(94, 93, 93);">{{item.date}}</div>
+                                        <div class="col-6" style="text-align: left; color: rgb(94, 93, 93); font-weight: 450;">Time</div>
+                                        <div class="col-6" style="text-align: right; color: rgb(94, 93, 93);">{{item.time%1==0? item.time+':00 pm':(item.time-0.3)+":30 pm" }}</div>
+                                        <div class="col-6" style="text-align: left; color: rgb(94, 93, 93); font-weight: 450;">Doctor Name</div>
+                                        <div class="col-6" style="text-align: right; color: rgb(94, 93, 93);">{{item.d_id.name}}</div>
+                                        <div class="col-6" style="text-align: left; color: rgb(94, 93, 93); font-weight: 450;">Status</div>
+                                        <div class="col-6" style="text-align: right; color: rgb(94, 93, 93);"> {{item.status? 'Checked': 'Not Checked'}}</div>
+                                        <div class="col-6" style="text-align: left; color: rgb(94, 93, 93); font-weight: 450;">Hospital</div>
+                                        <div class="col-6" style="text-align: right; color: rgb(94, 93, 93);">{{item.d_id.h_id.name}}</div>
+                                        <div class="col-6" style="text-align: left; color: rgb(94, 93, 93);">
+                                            <a
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdrop"
+                                                mat-raised-button
+                                                (click)="viewDoctor(item.d_id.id)"
+                                                style="color:
+                                                white;background-color: #ffbf00; text-align: center; width: 100%; font-size: 100%;">
+                                                <mat-icon>search</mat-icon>
+                                                View Doctor
+                                            </a>
+                                            
+                                        </div>
+                                        <div class="col-6" style="text-align: left; color: rgb(94, 93, 93);">
+                                            
+                                            <a
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdrop1"
+                                                mat-raised-button
+                                                (click)="viewPatientData(item.p_id.id)"
+                                                style="color:
+                                                white;background-color: #000066; text-align: center; width: 100%; font-size: 100%;">
+                                                <mat-icon>pregnant_woman</mat-icon>
+                                                View Patient
+                                            </a>
+                                        </div>
+                                    </div>
+                                </mat-card-content>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="staticBackdropLabel"
+                    style="text-align: center;"><strong>Doctor Details</strong>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Doctors ID :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.id}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Full Name :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.name}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Username :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.username}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>CNIC No. :
+                    </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.cnic}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Contact No.
+                            : </b> </div>
+                            <div class="col" style="text-align: right;">{{temp1.contact}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Gender
+                            : </b> </div>
+                            <div class="col" style="text-align: right;">{{temp1.gender}}</div>
+                        </div>
+                        <div class="row">
+                    <div class="col" style="text-align: left;"><b>Martial Status
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.m_status}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>City
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.city_id}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Hospital
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.h_id}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Language
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.language}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Specialization
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.major_id}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Physical Consultancy Fee
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">Rs: {{temp1.pfees}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Online Consultancy Fee
+                        : </b> </div>
+                    <div class="col" style="text-align: right;">Rs: {{temp1.cfees}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Morning Slot
+                        : </b> </div>
+                        <div class="col" style="text-align: right;">{{temp1.m_start}} - {{temp1.m_end}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Afternoon Slot
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp1.a_start}} - {{temp1.a_end}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Evening Slot : </b> </div>
+                            <div class="col" style="text-align: right;">{{temp1.e_start}} - {{temp1.e_end}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="staticBackdropLabel"
+                    style="text-align: center;"><strong>Patient Details</strong>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Patients ID :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.id}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Full Name :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.name}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Username :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.username}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Email :
+                        </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.email}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Contact No.
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.contact}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Gender
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.gender}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>Address
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.address}}</div>
+                </div>
+                <div class="row">
+                    <div class="col" style="text-align: left;"><b>CNIC
+                            : </b> </div>
+                    <div class="col" style="text-align: right;">{{temp2.cnic}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
